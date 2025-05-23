@@ -1,0 +1,6 @@
+streamlit
+tqdm
+requests
+langchain
+sentence-transformers
+chromadb

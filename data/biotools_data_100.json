@@ -1,0 +1,602 @@
+[
+    {
+        "id": "openms",
+        "name": "OpenMS",
+        "text_content": "Tool Name: OpenMS\nDescription: Open source library and a collection of tools and interfaces for the analysis of mass spectrometry data. Includes over 200 standalone (TOPP) tools that can be combined to a workflow with the integrated workflow editor TOPPAS. Raw and intermediate mass spectrometry data can be visualised with the included viewer TOPPView.\nFunctions: Spectral analysis, Target-Decoy, Retention time prediction, Mass spectra calibration, Peptide identification, Parsing, Splitting, Protein identification, Peak detection, Annotation, Deisotoping, Prediction and recognition (protein), Labeled quantification, Standardisation and normalisation, Comparison, Protein quantification, Isotope-coded protein label, Data handling, iTRAQ, Label-free quantification, Mass spectrum visualisation, Chromatographic alignment, Formatting, Protein feature detection\nTopics: Proteomics, Proteomics experiment, Metabolomics\nHomepage: http://www.openms.de\nDocumentation: http://ftp.mi.fu-berlin.de/pub/OpenMS/release-documentation/html/index.html\n",
+        "source": "https://bio.tools/api/t/openms?format=json"
+    },
+    {
+        "id": "hictkpy",
+        "name": "hictkpy",
+        "text_content": "Tool Name: hictkpy\nDescription: Python bindings for hictk: read and write .cool and .hic files directly from Python\nFunctions: N/A\nTopics: Bioinformatics, Sequence analysis\nHomepage: https://github.com/paulsengroup/hictkpy\nDocumentation: https://hictkpy.readthedocs.io/en/stable/\n",
+        "source": "https://bio.tools/api/t/hictkpy?format=json"
+    },
+    {
+        "id": "hictk",
+        "name": "hictk",
+        "text_content": "Tool Name: hictk\nDescription: Blazing fast toolkit to work with .hic and .cool files\nFunctions: N/A\nTopics: Bioinformatics, Sequence analysis\nHomepage: https://github.com/paulsengroup/hictk\nDocumentation: https://hictk.readthedocs.io/en/stable/index.html\n",
+        "source": "https://bio.tools/api/t/hictk?format=json"
+    },
+    {
+        "id": "nextprot",
+        "name": "neXtProt",
+        "text_content": "Tool Name: neXtProt\nDescription: neXtProt was an innovative knowledge platform dedicated to human proteins. This resource contained a wealth of high-quality data on all the human proteins that are produced by the 20'000 protein-coding genes found in the human genome. The content of neXtProt was continuously extended so as to provide many more carefully selected data sets and analysis tools. neXtProt data and tools have been archived.\nFunctions: Protein sequence analysis, Query and retrieval, Protein structure analysis, Visualisation\nTopics: Proteomics, Protein variants, Rare diseases, Proteins, Protein modifications, Model organisms\nHomepage: https://www.expasy.org/archives/nextprot\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/nextprot?format=json"
+    },
+    {
+        "id": "prolfquapp",
+        "name": "prolfquapp",
+        "text_content": "Tool Name: prolfquapp\nDescription: A command-line tool for differential expression analysis in quantitative proteomics\nFunctions: Validation, Expression data visualisation, Differential protein expression profiling\nTopics: Proteomics\nHomepage: https://github.com/prolfqua/prolfquapp\nDocumentation: https://github.com/prolfqua/prolfquapp/blob/master/README.md\n",
+        "source": "https://bio.tools/api/t/prolfquapp?format=json"
+    },
+    {
+        "id": "disulfind",
+        "name": "DISULFIND",
+        "text_content": "Tool Name: DISULFIND\nDescription: DISULFIND is a server for predicting the disulfide bonding state of cysteines and their disulfide connectivity given a protein sequence.\nFunctions: Protein cysteine and disulfide bond assignment, Protein sequence analysis, Prediction and recognition, Protein feature detection\nTopics: Sequence composition, complexity and repeats, Gene and protein families, Proteins, Protein sites, features and motifs, Structure prediction\nHomepage: http://disulfind.dsi.unifi.it/\nDocumentation: http://disulfind.dsi.unifi.it/help.php\n",
+        "source": "https://bio.tools/api/t/disulfind?format=json"
+    },
+    {
+        "id": "spacedust",
+        "name": "Spacedust",
+        "text_content": "Tool Name: Spacedust\nDescription: Spacedust is a modular toolkit for identification of conserved gene clusters among multiple genomes based on homology and conservation of gene neighborhood. Spacedust adapts the fast and sensitive structure comparisons of Foldseek and homology search capabilities of MMseqs2. It introduces a novel approach of aggregating sets of homologous hits between pairs of genomes and identifies cluster of hits with conserved gene neighborhood between each using agglomerative hierarchical clustering algorithm.\nFunctions: N/A\nTopics: Sequence analysis\nHomepage: https://github.com/soedinglab/spacedust/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/spacedust?format=json"
+    },
+    {
+        "id": "sequali",
+        "name": "Sequali",
+        "text_content": "Tool Name: Sequali\nDescription: Fast sequencing data quality metrics\nFunctions: Sequencing quality control, Statistical calculation\nTopics: Sequence analysis, Data quality management\nHomepage: https://github.com/rhpvorderman/sequali\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/sequali?format=json"
+    },
+    {
+        "id": "squirrel",
+        "name": "squirrel",
+        "text_content": "Tool Name: squirrel\nDescription: Some QUIck Reconstruction to Resolve Evolutionary Links\n\nSquirrel provides a rapid way of producing reliable alignments for MPXV and also enable maximum-likelihood phylogenetics pipeline tree estimation.\nFunctions: Sequencing quality control, Phylogenetic analysis\nTopics: Virology\nHomepage: https://github.com/aineniamh/squirrel\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/squirrel?format=json"
+    },
+    {
+        "id": "enzymedetector",
+        "name": "EnzymeDetector",
+        "text_content": "Tool Name: EnzymeDetector\nDescription: The EnzymeDetector database offers a comparative and integrative approach to find enzymatic annotations. The most comprehensive databases for protein and genome annotation, namely manually annotated data and text mining data from BRENDA, UniProt, KEGG, PATRIC, and NCBI's RefSeq, are integrated to have a vast view on the organism of interest. The data are complemented with self-performed annotation methods, i.e. BLAST vs. all enzyme annotations from Swiss-Prot and BrEPS enzyme pattern recognition.\nFunctions: N/A\nTopics: Sequence analysis, Enzymes\nHomepage: https://ed.brenda-enzymes.org/help.php\nDocumentation: https://www.brenda-enzymes.org/information/tutorial_training/BRENDA_Tutorial_EnzymeDetector.pdf\n",
+        "source": "https://bio.tools/api/t/enzymedetector?format=json"
+    },
+    {
+        "id": "artemis3D",
+        "name": "ARTEMIS",
+        "text_content": "Tool Name: ARTEMIS\nDescription: a method for topology-independent superposition of RNA 3D structures and structure-based sequence alignment\nFunctions: Nucleic acid structure comparison, Pairwise structure alignment\nTopics: Mapping, Nucleic acid sites, features and motifs, DNA, Nucleic acids, Computational biology, RNA, Nucleic acid structure analysis\nHomepage: https://github.com/david-bogdan-r/ARTEMIS\nDocumentation: https://github.com/david-bogdan-r/ARTEMIS/blob/main/README.md\n",
+        "source": "https://bio.tools/api/t/artemis3D?format=json"
+    },
+    {
+        "id": "nanomnt",
+        "name": "NanoMnT",
+        "text_content": "Tool Name: NanoMnT\nDescription: NanoMnT: An STR Analysis Tool for Oxford Nanopore Sequencing Data Driven by a Comprehensive Analysis of Error Profile in STR regions.\nFunctions: N/A\nTopics: N/A\nHomepage: https://github.com/18parkky/NanoMnT\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/nanomnt?format=json"
+    },
+    {
+        "id": "isfinder",
+        "name": "ISfinder",
+        "text_content": "Tool Name: ISfinder\nDescription: It is a dedicated insertion sequence (IS) database which assigns names to individual ISs to maintain a coherent nomenclature, an IS repositaory including >3000 individual ISs from both bacteria and archaea and provides a basis for IS classification. Each IS is indexed in ISfinder with various associated pieces of information and classified into a group or family to provide some insight into its phylogeny.\nFunctions: Gene-set enrichment analysis, Bibliography generation, Genome indexing\nTopics: Phylogeny, Literature and language, Model organisms, Sequencing, Mobile genetic elements\nHomepage: http://www-is.biotoul.fr\nDocumentation: https://www-is.biotoul.fr/general_information.php\n",
+        "source": "https://bio.tools/api/t/isfinder?format=json"
+    },
+    {
+        "id": "silva",
+        "name": "SILVA rRNA database",
+        "text_content": "Tool Name: SILVA rRNA database\nDescription: SILVA provides comprehensive, quality checked and regularly updated datasets of aligned small (16S/18S, SSU) and large subunit (23S/28S, LSU) ribosomal RNA (rRNA) sequences for all three domains of life (Bacteria, Archaea and Eukaryota).\nFunctions: Primer and probe design, Taxonomic classification, Query and retrieval, Sequence alignment\nTopics: Functional, regulatory and non-coding RNA, Biodiversity, Sequence analysis, Probes and primers, Taxonomy, Microbiology, Phylogenetics\nHomepage: http://www.arb-silva.de\nDocumentation: https://www.arb-silva.de/silva-license-information/\n",
+        "source": "https://bio.tools/api/t/silva?format=json"
+    },
+    {
+        "id": "silvangs",
+        "name": "SILVAngs",
+        "text_content": "Tool Name: SILVAngs\nDescription: SILVAngs is a data analysis service for ribosomal RNA gene (rDNA) amplicon reads from high-throughput sequencing (next-generation sequencing (NGS)) approaches based on an automatic software pipeline. It uses the SILVA rDNA databases, taxonomies, and alignments as a reference. It facilitates the classification of rDNA reads and provides a wealth of results (tables, graphs and sequence files) for download.\nFunctions: Nucleic acid sequence analysis, Sequence clustering, Statistical calculation, Visualisation, Taxonomic classification, Sequence alignment, Validation\nTopics: Taxonomy, Metagenomics, Biodiversity\nHomepage: https://www.arb-silva.de/ngs/\nDocumentation: https://www.arb-silva.de/ngs/service/file/?file=SILVAngs_User_Guide_15_12_15.pdf\n",
+        "source": "https://bio.tools/api/t/silvangs?format=json"
+    },
+    {
+        "id": "mmp",
+        "name": "Marine Metagenomics Portal",
+        "text_content": "Tool Name: Marine Metagenomics Portal\nDescription: The Marine Metagenomics Portal (MMP) hosts the marine databases MarRef, MarDB, MarFun, and SalDB. These databases provide the marine scientific community with openly accessible, comprehensive microbial genomics and metagenomics resources, including high-quality, manually curated sequences. The user-friendly web interface allows visitors to easily navigate and refine searches within the contextual databases and offers additional BLAST searches, visualizations, downloads, and workflows (via META-pipe).\nFunctions: Sequence annotation, Taxonomic classification, Query and retrieval, Analysis\nTopics: Data integration and warehousing, Data mining, Microbial ecology, Bioinformatics, Sequence analysis, Metagenomics, Function analysis, Marine biology, Taxonomy, Genomics\nHomepage: https://sfb.mmp2.sigma2.no\nDocumentation: https://mmp2.sfb.uit.no/terms-of-use/\n",
+        "source": "https://bio.tools/api/t/mmp?format=json"
+    },
+    {
+        "id": "phistruct",
+        "name": "PHIStruct",
+        "text_content": "Tool Name: PHIStruct\nDescription: PHIStruct is a phage-host interaction prediction tool that uses structure-aware protein embeddings to represent the receptor-binding proteins (RBPs) of phages. \n\nBy incorporating structure information, it presents improvements over using sequence-only protein embeddings and feature-engineered sequence properties \u2014 especially for phages with RBPs that have low sequence similarity to those of known phages.\nFunctions: Prediction and recognition\nTopics: Proteomics, Bioinformatics, Machine learning, Virology, Proteins, Computational biology, Protein structure analysis\nHomepage: https://github.com/bioinfodlsu/PHIStruct\nDocumentation: https://github.com/bioinfodlsu/PHIStruct\n",
+        "source": "https://bio.tools/api/t/phistruct?format=json"
+    },
+    {
+        "id": "phiembed",
+        "name": "PHIEmbed",
+        "text_content": "Tool Name: PHIEmbed\nDescription: PHIEmbed is a phage-host interaction prediction tool that uses protein language models to represent the receptor-binding proteins of phages. It presents improvements over using handcrafted (manually feature-engineered) sequence properties and eliminates the need to manually extract and select features from phage sequences.\nFunctions: Prediction and recognition\nTopics: Proteomics, Bioinformatics, Sequence analysis, Machine learning, Virology, Proteins, Computational biology\nHomepage: https://github.com/bioinfodlsu/phage-host-prediction\nDocumentation: https://github.com/bioinfodlsu/phage-host-prediction\n",
+        "source": "https://bio.tools/api/t/phiembed?format=json"
+    },
+    {
+        "id": "scanpy",
+        "name": "SCANPY",
+        "text_content": "Tool Name: SCANPY\nDescription: Scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, pseudotime and trajectory inference and differential expression testing. The Python-based implementation efficiently deals with datasets of more than one million cells.\nFunctions: Differential gene expression analysis\nTopics: Cell biology, Genetics, Single-cell sequencing, Gene expression\nHomepage: https://github.com/theislab/Scanpy\nDocumentation: https://scanpy.readthedocs.io/en/latest/\n",
+        "source": "https://bio.tools/api/t/scanpy?format=json"
+    },
+    {
+        "id": "muon",
+        "name": "muon",
+        "text_content": "Tool Name: muon\nDescription: muon is a Python framework for multimodal omics analysis.\nFunctions: N/A\nTopics: Cell biology, Epigenetics, Gene expression, Single-cell sequencing, Multiomics\nHomepage: https://muon.scverse.org/\nDocumentation: https://muon.readthedocs.io/en/latest/index.html\n",
+        "source": "https://bio.tools/api/t/muon?format=json"
+    },
+    {
+        "id": "tmprime",
+        "name": "TmPrime",
+        "text_content": "Tool Name: TmPrime\nDescription: Allows users to design oligonucleotide sets for gene assembly by both ligase chain reaction and polymerase chain reaction. The program also provides functions to separate long genes into smaller fragments for multi-pool assembly and codon optimization for expression.\nFunctions: PCR primer design, Read mapping, Sequence assembly\nTopics: Transcription factors and regulatory sites, Sequence assembly, Humans, Gene expression, Nucleic acid structure analysis\nHomepage: http://prime.ibn.a-star.edu.sg\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/tmprime?format=json"
+    },
+    {
+        "id": "bakta",
+        "name": "Bakta",
+        "text_content": "Tool Name: Bakta\nDescription: Rapid & standardized annotation of bacterial genomes, MAGs & plasmids\nFunctions: Genome annotation\nTopics: Bioinformatics, Sequence analysis, Genomics\nHomepage: https://github.com/oschwengers/bakta\nDocumentation: https://github.com/oschwengers/bakta/blob/main/README.md\n",
+        "source": "https://bio.tools/api/t/bakta?format=json"
+    },
+    {
+        "id": "trend_protein_evolution_function",
+        "name": "TREND Protein Evolution Function",
+        "text_content": "Tool Name: TREND Protein Evolution Function\nDescription: TREND is a platform that allows researchers to explore protein function and evolution identifying protein features, gene neighborhoods and operons, clustering neighboring genes, and integrating all these data into phylogenomic context and cross-referencing with RefSeq, Pfam, CDD and MiST databases. The platform provides ample opportunities for adjusting each step of the analysis.\nFunctions: Sequence clustering, Multiple sequence alignment, Protein domain recognition, Sequence classification, Phylogenetic inference, Protein feature detection\nTopics: Bioinformatics, Phylogeny, Evolutionary biology, Functional genomics, Protein sites, features and motifs, Microbiology, Phylogenomics\nHomepage: http://trend.evobionet.com/\nDocumentation: http://trend.evobionet.com/help\n",
+        "source": "https://bio.tools/api/t/trend_protein_evolution_function?format=json"
+    },
+    {
+        "id": "jcat",
+        "name": "JCat",
+        "text_content": "Tool Name: JCat\nDescription: Tool that can adjust the codon usage of an input sequence to the selected organism. Useful for improving the expression of foreign genes in hosts with different codon usage.\nFunctions: Codon usage fraction calculation, Codon usage table generation, Codon usage table comparison, Codon usage bias calculation, Codon usage analysis\nTopics: Zoology, Model organisms, Gene expression\nHomepage: http://www.jcat.de/\nDocumentation: http://www.jcat.de/Introduction.jsp\n",
+        "source": "https://bio.tools/api/t/jcat?format=json"
+    },
+    {
+        "id": "hictkr",
+        "name": "hictkR",
+        "text_content": "Tool Name: hictkR\nDescription: R bindings for hictk: read .cool and .hic files directly from R\nFunctions: N/A\nTopics: Bioinformatics, Sequence analysis\nHomepage: https://github.com/paulsengroup/hictkR\nDocumentation: https://paulsengroup.github.io/hictkR/\n",
+        "source": "https://bio.tools/api/t/hictkr?format=json"
+    },
+    {
+        "id": "Jalview",
+        "name": "Jalview",
+        "text_content": "Tool Name: Jalview\nDescription: Jalview is a free program for multiple sequence alignment editing, visualisation and analysis. Use it to view and edit sequence alignments, analyse them with phylogenetic trees and principal components analysis (PCA) plots and explore molecular structures and annotation.\nFunctions: Phylogenetic tree analysis, Sequence alignment editing, Sequence visualisation\nTopics: Sequence analysis, Data visualisation\nHomepage: https://www.jalview.org/\nDocumentation: https://www.jalview.org/about/citation\n",
+        "source": "https://bio.tools/api/t/Jalview?format=json"
+    },
+    {
+        "id": "MMseqs2",
+        "name": "MMseqs2",
+        "text_content": "Tool Name: MMseqs2\nDescription: MMseqs2 (Many-against-Many sequence searching) is a software suite to search and cluster huge protein and nucleotide sequence sets. MMseqs2 is open source GPL-licensed software implemented in C++ for Linux, MacOS, and (as beta version, via cygwin) Windows. The software is designed to run on multiple cores and servers and exhibits very good scalability. MMseqs2 can run 10000 times faster than BLAST. At 100 times its speed it achieves almost the same sensitivity. It can perform profile searches with the same sensitivity as PSI-BLAST at over 400 times its speed.\n\nMMseqs2 includes Linclust, the first clustering algorithm whose runtime scales linearly With Linclust we clustered 1.6 billion metagenomic sequence fragments in 10\u2009h on a single server to 50% sequence identity.\nFunctions: Sequence similarity search, Taxonomic classification, Sequence alignment, Sequence clustering\nTopics: Sequence analysis, Gene and protein families, Metagenomics, Proteins, Nucleic acids, Taxonomy\nHomepage: https://mmseqs.com\nDocumentation: https://github.com/soedinglab/MMseqs2/blob/master/README.md\n",
+        "source": "https://bio.tools/api/t/MMseqs2?format=json"
+    },
+    {
+        "id": "gen_seeker",
+        "name": "Gen Seeker",
+        "text_content": "Tool Name: Gen Seeker\nDescription: Gen Seeker is the browser of variants detected in the Czech population included in the Czech digital genome map. \nAlthough Slavs are the largest European ethnolinguistic group, Slavic and especially Czech genomes are underrepresented in international genomic databases, which limits the ability to understand and interpret specific slavic gene variations.\nFunctions: Genome analysis\nTopics: Genetic variation\nHomepage: https://czechgenome.cz/search\nDocumentation: https://czechgenome.cz/data-info\n",
+        "source": "https://bio.tools/api/t/gen_seeker?format=json"
+    },
+    {
+        "id": "comparative_genometrics",
+        "name": "Comparative genometrics CG database",
+        "text_content": "Tool Name: Comparative genometrics CG database\nDescription: Devoted to the characterization of complete chromosome sequences by standardized genometric methods, this website displays for sequenced genomes, three different genometric analyses: the DNA walk and the GC and TA skews during the initial phase. Although primarly focused on prokaryotic chromosomes, the CG website posts genometric information on paradigm plasmids, phages, viruses, and organelles.\nFunctions: Query and retrieval\nTopics: Comparative genomics, DNA, Nucleic acid structure analysis\nHomepage: http://www2.unil.ch/comparativegenometrics/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/comparative_genometrics?format=json"
+    },
+    {
+        "id": "simap_ws",
+        "name": "SIMAP WS",
+        "text_content": "Tool Name: SIMAP WS\nDescription: Database containing the similarity space formed by about all amino-acid sequences from public databases and completely sequenced genomes.\nFunctions: Protein sequence analysis, Data retrieval\nTopics: Sequence analysis, Data management\nHomepage: http://liferay.csb.univie.ac.at/portal/web/simap/webservice\nDocumentation: http://liferay.csb.univie.ac.at/portal/web/simap/webservice\n",
+        "source": "https://bio.tools/api/t/simap_ws?format=json"
+    },
+    {
+        "id": "rnaalifoldws",
+        "name": "RNAalifoldWS",
+        "text_content": "Tool Name: RNAalifoldWS\nDescription: Predict a consensus secondary structure of a set of aligned sequences.\nFunctions: RNA secondary structure prediction, Nucleic acid sequence analysis\nTopics: Sequence analysis, Nucleic acid structure analysis\nHomepage: http://rna.tbi.univie.ac.at/cgi-bin/RNAalifold.cgi\nDocumentation: http://rna.tbi.univie.ac.at/cgi-bin/RNAalifold.cgi\n",
+        "source": "https://bio.tools/api/t/rnaalifoldws?format=json"
+    },
+    {
+        "id": "svmhc",
+        "name": "SVMHC",
+        "text_content": "Tool Name: SVMHC\nDescription: Prediction of MHC class I binding peptides.\nFunctions: Prediction and recognition\nTopics: Sequence analysis\nHomepage: http://www.sbc.su.se/%7Epierre/svmhc/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/svmhc?format=json"
+    },
+    {
+        "id": "mdr",
+        "name": "MDR database",
+        "text_content": "Tool Name: MDR database\nDescription: Medium-chain dehydrogenases/reductases database.\nFunctions: Prediction and recognition\nTopics: Sequence analysis\nHomepage: http://www.bioinfo.ifm.liu.se/services/mdr/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/mdr?format=json"
+    },
+    {
+        "id": "drip-pred",
+        "name": "DRIP-PRED",
+        "text_content": "Tool Name: DRIP-PRED\nDescription: Disorder/order prediction for proteins.\nFunctions: Prediction and recognition\nTopics: Sequence analysis\nHomepage: http://www.sbc.su.se/%7Emaccallr/disorder/cgi-bin/submit.cgi\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/drip-pred?format=json"
+    },
+    {
+        "id": "asepcr",
+        "name": "ASePCR",
+        "text_content": "Tool Name: ASePCR\nDescription: Tool for carrying out e-PCR to detect differences in amplicon sizes in transcripts from different tissues and organs.\nFunctions: Splicing model analysis, Splice transcript prediction\nTopics: Sequencing, Model organisms, RNA splicing, Gene expression\nHomepage: http://genome.ewha.ac.kr/ASePCR/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/asepcr?format=json"
+    },
+    {
+        "id": "pathway_explorer",
+        "name": "Pathway Explorer",
+        "text_content": "Tool Name: Pathway Explorer\nDescription: Tool for visualizing high throughput expression data simultaneously with biological pathway data available from KEGG, BioCarta, and GenMAPP.\nFunctions: Pathway or network analysis, Gene expression profiling, Gene expression profile pathway mapping, Network simulation\nTopics: Molecular interactions, pathways and networks, Sequencing, Gene expression\nHomepage: https://pathwayexplorer.genome.tugraz.at/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/pathway_explorer?format=json"
+    },
+    {
+        "id": "ibm_pattern_discovery",
+        "name": "IBM Bioinformatics and Pattern Discovery Group",
+        "text_content": "Tool Name: IBM Bioinformatics and Pattern Discovery Group\nDescription: Extensive server possessing a wide range of tools for pattern discovery in DNA and protein sequences as well as in text. Tools for multiple sequence alignment, gene discovery, protein annotation, and other applications also exist on this server. A detailed help page is provided for all tools.\nFunctions: Sequence motif discovery, Service discovery, Multiple sequence alignment, Indel detection, Protein sequence analysis\nTopics: Proteins, DNA, Gene and protein families, Protein sites, features and motifs\nHomepage: http://cbcsrv.watson.ibm.com/Tspd.html\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/ibm_pattern_discovery?format=json"
+    },
+    {
+        "id": "repper",
+        "name": "REPPER",
+        "text_content": "Tool Name: REPPER\nDescription: Tool for detecting and analysing regions in protein sequences or sequence alignements that have short gapless repeats.\nFunctions: Repeat sequence organisation analysis, Repeat sequence detection, Sequence alignment, Protein sequence analysis, Protein feature detection\nTopics: Sequence analysis, Sequence composition, complexity and repeats, Gene and protein families, Proteins, Protein sites, features and motifs\nHomepage: http://protevo.eb.tuebingen.mpg.de/repper\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/repper?format=json"
+    },
+    {
+        "id": "tmbeta-net",
+        "name": "TMBETA-NET",
+        "text_content": "Tool Name: TMBETA-NET\nDescription: Tool that predicts transmembrane beta strands in an outer membrane protein from its amino acid sequence.\nFunctions: Transmembrane protein prediction, Protein subcellular localisation prediction, Protein secondary structure prediction, Transmembrane protein analysis\nTopics: Membrane and lipoproteins, Small molecules, Proteins, Structure prediction, Protein folds and structural domains\nHomepage: http://psfs.cbrc.jp/tmbeta-net/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/tmbeta-net?format=json"
+    },
+    {
+        "id": "ce-mc",
+        "name": "CE-MC",
+        "text_content": "Tool Name: CE-MC\nDescription: A multiple protein structure alignment server which creates an all-to-all pairwise alignment using a combinatorial extension program and then using Monte Carlo optimization methods conducts an iterative global optimization.  Results are formatted using JOY.\nFunctions: Global structure alignment, Pairwise sequence alignment, Multiple structure alignment, Pairwise structure alignment\nTopics: Structure prediction, Proteins, Protein structure analysis, Nucleic acid structure analysis\nHomepage: http://bioinformatics.albany.edu/~cemc/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/ce-mc?format=json"
+    },
+    {
+        "id": "inclusive",
+        "name": "INCLUSive",
+        "text_content": "Tool Name: INCLUSive\nDescription: Set of tools for the analysis of gene expression data and the discovery of cis-regulatory sequence elements.\nFunctions: Differential gene expression analysis, Gene expression QTL analysis, Gene expression analysis, Gene expression correlation analysis\nTopics: Sequence analysis, Gene expression\nHomepage: http://www.esat.kuleuven.ac.be/inclusive\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/inclusive?format=json"
+    },
+    {
+        "id": "asmodeler",
+        "name": "ASmodeler",
+        "text_content": "Tool Name: ASmodeler\nDescription: Gene modeling server which focuses on the modeling of alternative splicing. It is based on the alignment of mRNA, EST and protein sequences and combines genome-based clustering and transcript assembly.  Supports human, mouse and rat genomes.\nFunctions: Splicing model analysis, Protein modelling, EST assembly, Sequence assembly\nTopics: Sequence assembly, Humans, Gene expression, Gene transcripts, RNA splicing\nHomepage: http://genome.ewha.ac.kr/ECgene/ASmodeler/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/asmodeler?format=json"
+    },
+    {
+        "id": "pepbuild",
+        "name": "PepBuild",
+        "text_content": "Tool Name: PepBuild\nDescription: Tool that facilitates the construction, from known sequence and secondary/tertiary structures, of capped or uncapped proteins. The output generated is in PDB format.\nFunctions: Structure visualisation, Protein secondary structure analysis, Protein secondary structure comparison\nTopics: Proteins, Protein secondary structure, Structure prediction, Protein folds and structural domains, Protein structure analysis\nHomepage: http://www.imtech.res.in/bvs/pepbuild/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/pepbuild?format=json"
+    },
+    {
+        "id": "motif3d",
+        "name": "Motif3D",
+        "text_content": "Tool Name: Motif3D\nDescription: Protein structure viewer for visualizing sequence motifs contained in the PRINTS database on 3D structures.\nFunctions: Protein model validation, Protein structure assignment, Protein structure prediction, Protein structural motif recognition, Protein structure analysis\nTopics: Sequence sites, features and motifs, Proteins, Structure analysis, Protein structural motifs and surfaces, Protein structure analysis\nHomepage: http://umber.sbs.man.ac.uk/dbbrowser/motif3d/motif3d.html\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/motif3d?format=json"
+    },
+    {
+        "id": "pepx",
+        "name": "PepX",
+        "text_content": "Tool Name: PepX\nDescription: Exhaustive data set of all protein-peptide complexes available in the PDB with peptide lengths up to 35 residues. Complexes have been clustered based on their binding interfaces rather than sequence homology, providing a set of structurally diverse protein-peptide interactions. Each complex is annotated with both biological and structural information. Peptides are also annotated with naturally occurring backbone variations using fragment clusters from the BriX database to aid peptide design.\nFunctions: Clustering, Protein modelling, Peptide database search\nTopics: Protein folding, stability and design, Small molecules, Molecular interactions, pathways and networks, Proteins, Structure analysis\nHomepage: http://pepx.switchlab.org/pepx/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/pepx?format=json"
+    },
+    {
+        "id": "selox",
+        "name": "SeLOX",
+        "text_content": "Tool Name: SeLOX\nDescription: Web server identifies degenerate lox-like sites within genomic sequences.\nFunctions: Repeat sequence analysis, Genome comparison, Recombination detection, Genome indexing\nTopics: Transcription factors and regulatory sites, Humans, Model organisms, Sequencing, Genomics\nHomepage: http://selox.mpi-cbg.de/cgi-bin/selox/index\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/selox?format=json"
+    },
+    {
+        "id": "plantloc",
+        "name": "PlantLoc",
+        "text_content": "Tool Name: PlantLoc\nDescription: Web server for predicting plant protein subcellular localization by substantiality motif.\nFunctions: Protein subcellular localisation prediction, Protein feature detection, Protein function prediction\nTopics: Plants, Sequence sites, features and motifs, Proteins, Protein sites, features and motifs, Function analysis\nHomepage: http://cal.tongji.edu.cn/PlantLoc/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/plantloc?format=json"
+    },
+    {
+        "id": "biforce_toolbox",
+        "name": "BiForce Toolbox",
+        "text_content": "Tool Name: BiForce Toolbox\nDescription: Webserver for high throughput analysis of pair-wise epistasis in GWAS of quantitative and disease traits.\nFunctions: Genotyping, Over-representation analysis, Gene expression QTL analysis\nTopics: GWAS study, Molecular interactions, pathways and networks, Quantitative genetics, Sequencing, Pathology\nHomepage: http://bioinfo.utu.fi/BiForceToolbox/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/biforce_toolbox?format=json"
+    },
+    {
+        "id": "dsp",
+        "name": "DSP",
+        "text_content": "Tool Name: DSP\nDescription: Shape string predictor for protein sequences. It provides both predicted shape string and sequence-shape string profile for each query sequence allowing for comparison of protein structure or evolution in shape string space.\nFunctions: RNA secondary structure prediction, Protein structure prediction, Protein secondary structure prediction, Protein secondary structure prediction (coils), Protein secondary structure comparison\nTopics: Proteins, Protein secondary structure, Protein structural motifs and surfaces, Structure prediction, Protein structure analysis\nHomepage: http://cheminfo.tongji.edu.cn/dsp/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/dsp?format=json"
+    },
+    {
+        "id": "seemotif",
+        "name": "seeMotif",
+        "text_content": "Tool Name: seeMotif\nDescription: Allows users to interactively visualize sequence motifs on protein structures from Protein Data Bank (PDB).\nFunctions: Sequence motif analysis, Sequence motif discovery, Sequence motif comparison, Sequence motif recognition, Protein structural motif recognition\nTopics: Sequence sites, features and motifs, Gene and protein families, Proteins, Protein structural motifs and surfaces, Protein structure analysis\nHomepage: http://seemotif.csie.ntu.edu.tw\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/seemotif?format=json"
+    },
+    {
+        "id": "taro",
+        "name": "TarO",
+        "text_content": "Tool Name: TarO\nDescription: Collection of tools for protein target optimization analysis. Tools include those for annotation of putative orthologues and homologues, searches against the PDB with PSIBLAST, generation of annotated multiple sequence alignments and presentation of integrated results.\nFunctions: Multiple sequence alignment, Protein sequence analysis, Protein fold recognition\nTopics: Small molecules, Structure analysis, Proteins, Protein modifications, Protein folds and structural domains\nHomepage: http://www.compbio.dundee.ac.uk/taro\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/taro?format=json"
+    },
+    {
+        "id": "crisprcompar",
+        "name": "CRISPRcompar",
+        "text_content": "Tool Name: CRISPRcompar\nDescription: Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR) elements are used in this tool as a genetic marker for comparative and evolutionary analysis of closely related bacterial strains.\nFunctions: Clustering, Repeat sequence analysis, Genotyping, Genetic variation analysis\nTopics: Genetic variation, DNA polymorphism, Sequence composition, complexity and repeats, Model organisms, Genetics\nHomepage: http://crispr.u-psud.fr/CRISPRcompar/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/crisprcompar?format=json"
+    },
+    {
+        "id": "featurescan",
+        "name": "FeatureScan",
+        "text_content": "Tool Name: FeatureScan\nDescription: Searches for sequence similarity by comparing physico-chemical properties of DNA such as charge, melting enthalpy, conformational parameters, etc.\nFunctions: Sequence similarity search, Database search, Sequence database search (by property), Nucleic acid thermodynamic property calculation\nTopics: Transcription factors and regulatory sites, DNA, Physics, Gene expression, Nucleic acid structure analysis\nHomepage: http://gnaweb.gbf.de/cgi-bin/FeatureScan/FeatureScan.pl\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/featurescan?format=json"
+    },
+    {
+        "id": "hhsenser",
+        "name": "HHsenser",
+        "text_content": "Tool Name: HHsenser\nDescription: Tool for sensitive iterative sequence searching based on HMM-HMM comparison. Starting from a single sequence or an alignment, it is able to build alignments with as many near or remote homologs as possible allowing users to explore protein superfamilies.\nFunctions: Multiple sequence alignment, Sequence alignment analysis (conservation), Sequence alignment comparison\nTopics: Sequence sites, features and motifs, Sequence analysis, Proteins, Protein sites, features and motifs, Structure prediction\nHomepage: http://toolkit.tuebingen.mpg.de/hhsenser\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/hhsenser?format=json"
+    },
+    {
+        "id": "scope",
+        "name": "SCOPE",
+        "text_content": "Tool Name: SCOPE\nDescription: Set of programs aimed at identifying novel cis-regulatory elements from groups of upstream sequences. It does not have any nuisance parameters so does not require the user to guess what the results might be. It is also very robust to noisy data and is still 50% as accurate even in the presence of 4-fold noise. It can also identify other genes in the genome that might be coregulated with the original gene set.\nFunctions: Sequence motif discovery, Transcriptional regulatory element prediction, Regulatory element prediction, Transcription factor binding site prediction, Over-representation analysis\nTopics: Transcription factors and regulatory sites, Gene regulation, Molecular interactions, pathways and networks, Gene expression\nHomepage: http://genie.dartmouth.edu/scope/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/scope?format=json"
+    },
+    {
+        "id": "one-block_cyrca",
+        "name": "One-Block CYRCA",
+        "text_content": "Tool Name: One-Block CYRCA\nDescription: Program for identifying blocks (local ungapped profiles of the most conserved regions of protein families and domains) in a multiple sequence alignment based on the LAMA and CYRCA block-to-block alignment methods.\nFunctions: Protein fold recognition, Sequence alignment analysis (conservation), Local alignment, Local structure alignment, Protein feature detection\nTopics: Protein binding sites, Sequence sites, features and motifs, Gene and protein families, Structure prediction, Protein folds and structural domains\nHomepage: http://bioinformatics.weizmann.ac.il/~milana/OneCYRCA/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/one-block_cyrca?format=json"
+    },
+    {
+        "id": "rnamst",
+        "name": "RNAMST",
+        "text_content": "Tool Name: RNAMST\nDescription: Tool for identifying homologs of a pre-defined RNA structural motif among numerous RNA sequences.\nFunctions: Sequence motif recognition, RNA secondary structure alignment, RNA secondary structure prediction, RNA structure prediction, RNA secondary structure analysis\nTopics: Functional, regulatory and non-coding RNA, Protein structural motifs and surfaces, RNA, Structure prediction, Nucleic acid structure analysis\nHomepage: http://bioinfo.csie.ncu.edu.tw/~rnamst/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/rnamst?format=json"
+    },
+    {
+        "id": "chc_find",
+        "name": "CHC_FIND",
+        "text_content": "Tool Name: CHC_FIND\nDescription: Tool to analyze conserved hydrophobic contacts (CHC) from multiple structural alignments. In addition to a multiple sequence alignment, a structural alignment which provides the superposition of structurally conserved regions (SCRs) (i.e., results from SCR_FIND) needs to be provided.\nFunctions: Sequence alignment analysis (conservation), Multiple structure alignment, Structure alignment, Protein structural motif recognition\nTopics: Gene and protein families, Structure analysis, Protein structural motifs and surfaces, Structure prediction, Protein folds and structural domains\nHomepage: http://schubert.bio.uniroma1.it/CHC_FIND/index.html\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/chc_find?format=json"
+    },
+    {
+        "id": "parsesnp",
+        "name": "PARSESNP",
+        "text_content": "Tool Name: PARSESNP\nDescription: Tool for the analysis of polymorphisms in genes.\nFunctions: SNP detection, Polymorphism detection, Protein modelling, Protein sequence analysis\nTopics: Genetic variation, DNA polymorphism, Sequence analysis, Gene transcripts, Sequencing\nHomepage: http://www.proweb.org/parsesnp/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/parsesnp?format=json"
+    },
+    {
+        "id": "ilm",
+        "name": "ILM",
+        "text_content": "Tool Name: ILM\nDescription: Server which provides iterated loop matching and maximum weighted matching algorithms for pseudoknot containing RNA secondary structure prediction. Algorithms can apply thermodynamic and comparative information, and thus can be used for either aligned or individual sequences.\nFunctions: RNA secondary structure prediction, RNA secondary structure alignment, RNA secondary structure analysis, Structure visualisation\nTopics: Structure prediction, Protein secondary structure, RNA, Nucleic acid structure analysis\nHomepage: http://cic.cs.wustl.edu/RNA/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/ilm?format=json"
+    },
+    {
+        "id": "hmmstat_genouest",
+        "name": "hmmstat (genouest)",
+        "text_content": "Tool Name: hmmstat (genouest)\nDescription: Display summary statistics for a profile file.\nFunctions: Protein sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmstat_genouest?format=json"
+    },
+    {
+        "id": "hmmsim_genouest",
+        "name": "hmmsim (genouest)",
+        "text_content": "Tool Name: hmmsim (genouest)\nDescription: Collect profile HMM score distributions on random sequences.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmsim_genouest?format=json"
+    },
+    {
+        "id": "hmmsearch_genouest",
+        "name": "hmmsearch (genouest)",
+        "text_content": "Tool Name: hmmsearch (genouest)\nDescription: Search profile(s) against a sequence database.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmsearch_genouest?format=json"
+    },
+    {
+        "id": "hmmscan_genouest",
+        "name": "hmmscan (genouest)",
+        "text_content": "Tool Name: hmmscan (genouest)\nDescription: Search sequence(s) against a profile database.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmscan_genouest?format=json"
+    },
+    {
+        "id": "hmmfetch_genouest",
+        "name": "hmmfetch (genouest)",
+        "text_content": "Tool Name: hmmfetch (genouest)\nDescription: Retrieve profile HMM(s) from a file.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmfetch_genouest?format=json"
+    },
+    {
+        "id": "hmmemit",
+        "name": "hmmemit (genouest)",
+        "text_content": "Tool Name: hmmemit (genouest)\nDescription: Sample sequence(s) from a profile HMM.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmemit?format=json"
+    },
+    {
+        "id": "hmmconvert_genouest",
+        "name": "hmmconvert (genouest)",
+        "text_content": "Tool Name: hmmconvert (genouest)\nDescription: Convert between profile HMM file formats.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmconvert_genouest?format=json"
+    },
+    {
+        "id": "hmmbuild_genouest",
+        "name": "hmmbuild (genouest)",
+        "text_content": "Tool Name: hmmbuild (genouest)\nDescription: Profile HMM construction from multiple sequence alignments.\nFunctions: Multiple sequence alignment\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmbuild_genouest?format=json"
+    },
+    {
+        "id": "hmmalign_genouest",
+        "name": "hmmalign (genouest)",
+        "text_content": "Tool Name: hmmalign (genouest)\nDescription: Align sequences to a profile HMM.\nFunctions: Sequence analysis\nTopics: Sequence analysis, Sequence sites, features and motifs\nHomepage: http://webservices.genouest.org/opal2/dashboard?command=docs\nDocumentation: http://webservices.genouest.org/opal2/dashboard?command=docs\n",
+        "source": "https://bio.tools/api/t/hmmalign_genouest?format=json"
+    },
+    {
+        "id": "picxaa-web",
+        "name": "PicXAA-Web",
+        "text_content": "Tool Name: PicXAA-Web\nDescription: Web tool for probablistic alignment of multiple biological sequences using probabilistic non-progressive alignment algorithms. Multiple protein, DNA and RNA sequences may be analyzed.\nFunctions: Tree-based sequence alignment, Protein sequence analysis, Sequence alignment, Multiple sequence alignment\nTopics: Sequence analysis, Proteins, DNA, RNA, Nucleic acid structure analysis\nHomepage: http://gsp.tamu.edu/picxaa/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/picxaa-web?format=json"
+    },
+    {
+        "id": "orthoselect",
+        "name": "OrthoSelect",
+        "text_content": "Tool Name: OrthoSelect\nDescription: Web server detects orthologous gene sequences in EST libraries and outputs orthologous gene alignments. Annotations, data matrices for each gene, and the gene alignments may also be visualized.\nFunctions: Gene prediction, Gene functional annotation\nTopics: Sequence analysis, Gene and protein families, Gene transcripts, Phylogeny\nHomepage: http://orthoselect.gobics.de\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/orthoselect?format=json"
+    },
+    {
+        "id": "phyloscan",
+        "name": "Phyloscan",
+        "text_content": "Tool Name: Phyloscan\nDescription: Web server that locates transcription regulating binding sites by exploiting binding site evolutionary conservation and repeats in promoter regions. Mixed aligned and unaligned sequence data may be used.\nFunctions: Sequence alignment analysis (conservation), Transcriptional regulatory element prediction, Transcription factor binding site prediction, Promoter prediction, Protein binding site prediction\nTopics: Transcription factors and regulatory sites, Protein binding sites, Nucleic acid sites, features and motifs, DNA binding sites, Gene expression\nHomepage: http://bayesweb.wadsworth.org/phyloscan/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/phyloscan?format=json"
+    },
+    {
+        "id": "3d-fun",
+        "name": "3D-Fun",
+        "text_content": "Tool Name: 3D-Fun\nDescription: Software for predicting enzyme function from structure rather than sequence. Users input protein coordinates in PDB format to which all known protein structures are compared by 3D structural superposition. Superposition results are displayed through interactive graphics.\nFunctions: Protein modelling, Protein model validation, Protein structure assignment, Protein structure comparison, Protein structure prediction\nTopics: Molecular modelling, Proteins, Enzymes, Structure prediction, Protein structure analysis\nHomepage: http://3dfun.bioinfo.pl\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/3d-fun?format=json"
+    },
+    {
+        "id": "fgf",
+        "name": "FGF",
+        "text_content": "Tool Name: FGF\nDescription: Resource for finding gene families given a set of protein sequences by investigating phylogenetic trees, duplication fate, and selective pressure (ka/ks calculations).\nFunctions: Phylogenetic tree analysis (gene family prediction), Gene prediction, Phylogenetic tree generation, Phylogenetic tree analysis (natural selection)\nTopics: Mapping, Gene and protein families, Phylogeny, Animals, Phylogenetics\nHomepage: http://fgf.genomics.org.cn/service/index.jsp\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/fgf?format=json"
+    },
+    {
+        "id": "mirconnx",
+        "name": "mirConnX",
+        "text_content": "Tool Name: mirConnX\nDescription: Web server for inferring, displaying and parsing mRNA and microRNA gene regulatory networks. It combines sequence information with gene expression data analysis to create a disease specific, genome wide regulatory network. Only supports human and mouse.\nFunctions: Gene expression correlation analysis, Gene expression profiling, Gene expression analysis, Pathway or network prediction, Gene regulatory network analysis\nTopics: Functional, regulatory and non-coding RNA, Molecular interactions, pathways and networks, Gene expression, Gene transcripts, Pathology\nHomepage: http://www.benoslab.pitt.edu/mirconnx\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/mirconnx?format=json"
+    },
+    {
+        "id": "piranha",
+        "name": "PiRaNhA",
+        "text_content": "Tool Name: PiRaNhA\nDescription: Predicts the location of RNA binding residues in protein sequences using a support vector machine. Up to 10 protein sequences may be submitted.\nFunctions: Protein binding site prediction, Protein secondary structure prediction, Protein sequence analysis, Protein feature detection, Residue interaction prediction\nTopics: Protein binding sites, Machine learning, Proteins, Protein sites, features and motifs, RNA\nHomepage: http://www.bioinformatics.sussex.ac.uk/PIRANHA\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/piranha?format=json"
+    },
+    {
+        "id": "sara",
+        "name": "SARA",
+        "text_content": "Tool Name: SARA\nDescription: Based on the homonimous program, this server computes pairwise alignment of RNA structures for structure based assignment of RNA function. The server can also be used for RNA pairwise structure alignment.\nFunctions: RNA secondary structure alignment, Pairwise structure alignment, RNA structure prediction, Structure alignment, Pairwise sequence alignment\nTopics: Functional, regulatory and non-coding RNA, RNA, Structural biology, Structure prediction, Nucleic acid structure analysis\nHomepage: http://sgu.bioinfo.cipf.es/services/SARA/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/sara?format=json"
+    },
+    {
+        "id": "tmb-hunt",
+        "name": "TMB-Hunt",
+        "text_content": "Tool Name: TMB-Hunt\nDescription: Classifies protein sequences as transmembrane B-barrel (TMB) or non-TMB based on amino acid composition.\nFunctions: Sequence composition calculation, Protein signal peptide detection, Transmembrane protein prediction, Transmembrane protein analysis, Transmembrane protein visualisation\nTopics: Membrane and lipoproteins, Small molecules, Sequence composition, complexity and repeats, Proteins, Protein folds and structural domains\nHomepage: http://bmbpcu36.leeds.ac.uk/~andy/betaBarrel/AACompPred/aaTMB_Hunt.cgi\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/tmb-hunt?format=json"
+    },
+    {
+        "id": "miner",
+        "name": "MINER",
+        "text_content": "Tool Name: MINER\nDescription: Tool for the identification and visualization of phylogenetic motifs (regions within a multiple sequence alignment (MSA) that conserve the overall phylogeny of the complete family).\nFunctions: Tree-based sequence alignment, Sequence alignment analysis (conservation), Sequence alignment, Multiple sequence alignment\nTopics: Sequence sites, features and motifs, Sequence analysis, Phylogeny, Sequencing, Phylogenetics\nHomepage: http://coit-apple01.uncc.edu/MINER/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/miner?format=json"
+    },
+    {
+        "id": "nast",
+        "name": "NAST",
+        "text_content": "Tool Name: NAST\nDescription: Multiple sequence alignment server for comparative analysis of 16S rRNA gene sequences from bacteria and archaea.\nFunctions: Multiple sequence alignment, Sequence alignment analysis, Sequence alignment\nTopics: Transcription factors and regulatory sites, Sequence analysis, Probes and primers, Model organisms, Sequencing\nHomepage: http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/nast?format=json"
+    },
+    {
+        "id": "biobayesnet",
+        "name": "BioBayesNet",
+        "text_content": "Tool Name: BioBayesNet\nDescription: Server for feature extraction and Bayesian network modeling of biological sequence data.\nFunctions: Metabolic network modelling, Pathway or network analysis, Network simulation\nTopics: Sequence sites, features and motifs, Molecular interactions, pathways and networks, Sequence analysis, Systems biology, Structure prediction\nHomepage: http://biwww3.informatik.uni-freiburg.de:8080/BioBayesNet/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/biobayesnet?format=json"
+    },
+    {
+        "id": "mam",
+        "name": "MaM",
+        "text_content": "Tool Name: MaM\nDescription: Takes a multiple alignment of genomic sequences as input and calculates the locations of exons, common repeat elements and unique regions based on user-selected programs/information. The graphical display also allows users to focus an assessment of sequence variation on the identified regions.\nFunctions: Tree-based sequence alignment, Sequence alignment, Multiple sequence alignment, Genome alignment\nTopics: Sequence analysis, Sequence composition, complexity and repeats, Phylogeny, Gene transcripts, Sequencing\nHomepage: http://compbio.cs.sfu.ca/MAM.htm\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/mam?format=json"
+    },
+    {
+        "id": "webtraceminer",
+        "name": "WebTraceMiner",
+        "text_content": "Tool Name: WebTraceMiner\nDescription: Tool for processing and mining Expressed Sequence Tag (EST) trace files. It can help characterize 3&apos, and 5&apos, termini of cDNA inserts by detecting sequence features such as vector fragments, adapter/linker sequences, insert-flanking restriction endonuclease recognition sites, and polyA or polyT tails.\nFunctions: Vector sequence detection, Sequence feature detection, Restriction site recognition, Protein feature detection\nTopics: Sequence sites, features and motifs, Nucleic acid sites, features and motifs, Sequence analysis, DNA binding sites, Gene transcripts\nHomepage: http://www.conifergdb.org/software/wtm1.2/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/webtraceminer?format=json"
+    },
+    {
+        "id": "plotrep",
+        "name": "PlotRep",
+        "text_content": "Tool Name: PlotRep\nDescription: Tool for the visual analysis of dispersed genomic repeats. The tool is designed to merge fragments belonging to the same copy of a repeat and allows for the inspection of the results using a dot-plot like graphical output.\nFunctions: Repeat sequence analysis\nTopics: Sequence composition, complexity and repeats\nHomepage: http://repeats.abc.hu/cgi-bin/plotrep.pl\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/plotrep?format=json"
+    },
+    {
+        "id": "fatigoplus",
+        "name": "FatiGOplus",
+        "text_content": "Tool Name: FatiGOplus\nDescription: Tool for the functional profiling of genome-scale experiments oriented to the interpretation of microarray experiments. As part of the Babelomics suite, the tool finds differential distributions of biological terms (GO, KEGG pathways, Interpro motifs, Transfac motifs, CisRed motifs, etc.) between two groups of genes.\nFunctions: Sequence motif recognition, Gene prediction, Differential gene expression analysis\nTopics: Sequence sites, features and motifs, Molecular interactions, pathways and networks, Microarray experiment, Protein structural motifs and surfaces, Gene expression\nHomepage: http://www.fatigo.org/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/fatigoplus?format=json"
+    },
+    {
+        "id": "proteomirexpress",
+        "name": "ProteoMirExpress",
+        "text_content": "Tool Name: ProteoMirExpress\nDescription: Web server that integrates proteomic and mRNA expression data together to infer miRNA-centered regulatory networks.\nFunctions: Sequence analysis, Pathway or network analysis\nTopics: Functional, regulatory and non-coding RNA, Systems biology, Molecular interactions, pathways and networks\nHomepage: http://jjwanglab.org/proteomirexpress/\nDocumentation: http://jjwanglab.org/proteomirexpress/help\n",
+        "source": "https://bio.tools/api/t/proteomirexpress?format=json"
+    },
+    {
+        "id": "amps",
+        "name": "AMPS",
+        "text_content": "Tool Name: AMPS\nDescription: Suite of programs for multiple sequence alignment. The programs include options to incorporate non-sequence information such as secondary structures. It also implements flexible pattern matching and database scanning options, and includes functions for running randomisations to estimate the significance of sequence similarities.\nFunctions: Multiple sequence alignment, Sequence alignment\nTopics: Sequence analysis, Computational biology\nHomepage: http://www.compbio.dundee.ac.uk/software.html#msa\nDocumentation: http://www.compbio.dundee.ac.uk/manuals/amps/amps.html\n",
+        "source": "https://bio.tools/api/t/amps?format=json"
+    },
+    {
+        "id": "psi",
+        "name": "PSI",
+        "text_content": "Tool Name: PSI\nDescription: Web server which performs multiple sequence alignment (MSA) of proteins by combining homology extension with a consistency based alignment approach.\nFunctions: Multiple sequence alignment, Sequence alignment\nTopics: Proteins, Sequence analysis, Data management\nHomepage: http://tcoffee.crg.cat/apps/tcoffee/do:tmcoffee\nDocumentation: http://tcoffee.crg.cat/apps/tcoffee/tutorial_tmcoffee.html\n",
+        "source": "https://bio.tools/api/t/psi?format=json"
+    },
+    {
+        "id": "popdist",
+        "name": "POPDIST",
+        "text_content": "Tool Name: POPDIST\nDescription: Newly-developed population genetic data analysis program. It calculates a number of different genetic identities, phylogeny reconstructing measures, and distance reconstructing measures.\nFunctions: Sequence analysis, Phylogenetic tree reconstruction\nTopics: Data architecture, analysis and design, Population genetics, Phylogeny, Genetics\nHomepage: http://genetics.agrsci.dk/~bernt/popgen/\nDocumentation: http://genetics.agrsci.dk/~bernt/popgen/#doc\n",
+        "source": "https://bio.tools/api/t/popdist?format=json"
+    },
+    {
+        "id": "rdc-panda",
+        "name": "RDC-PANDA",
+        "text_content": "Tool Name: RDC-PANDA\nDescription: RDC-based SSE PAcking with NOEs for Structure Determination and NOE Assignment is a suite of programs for nuclear Overhauser effect (NOE) assignment and high-resolution structure determination starting with a global fold calculated from exact solutions to the residual dipolar coupling (RDC) equations. It is specifically designed for automated NMR NOE assignment and protein structure determination.\nFunctions: Protein sequence analysis\nTopics: Structure prediction, NMR, Protein structure analysis, Structural biology\nHomepage: http://www.cs.duke.edu/donaldlab/rdcpanda.php\nDocumentation: http://www.cs.duke.edu/donaldlab/software/rdcpanda/rdc-panda_manual.pdf\n",
+        "source": "https://bio.tools/api/t/rdc-panda?format=json"
+    },
+    {
+        "id": "msa",
+        "name": "msa",
+        "text_content": "Tool Name: msa\nDescription: Display multiple-sequence alignment. The tool is also available as R/BioConductor interface to the multiple sequence alignment algorithms ClustalW, ClustalOmega, and Muscle. All three algorithms are integrated in the package, therefore, they do not depend on any external software tools and are available for all major platforms.\nFunctions: Multiple sequence alignment, Sequence visualisation\nTopics: Sequence analysis, Sequence sites, features and motifs, Sequencing, Phylogenetics\nHomepage: http://msa.biojs.net\nDocumentation: https://github.com/wilzbach/msa/blob/master/LICENSE\n",
+        "source": "https://bio.tools/api/t/msa?format=json"
+    },
+    {
+        "id": "lis",
+        "name": "Legume Information System (LIS)",
+        "text_content": "Tool Name: Legume Information System (LIS)\nDescription: The Legume Information System enables productive applied and basic research in the legumes by relating data from multiple crop and model species, and by helping researchers traverse among various data types.\nFunctions: Mapping, Genetic mapping, Gene expression QTL analysis, Physical mapping, Sequence tag mapping\nTopics: Mapping, Molecular interactions, pathways and networks, Gene transcripts, Plant biology, Model organisms\nHomepage: http://comparative-legumes.org/\nDocumentation: \n",
+        "source": "https://bio.tools/api/t/lis?format=json"
+    },
+    {
+        "id": "i-pv",
+        "name": "I-PV",
+        "text_content": "Tool Name: I-PV\nDescription: Software that uses Circos to render interactive images for protein sequence visualization.\nFunctions: Protein sequence analysis, Visualisation\nTopics: Proteins, Genetic variation, Data visualisation\nHomepage: http://www.i-pv.org/\nDocumentation: http://www.i-pv.org/#nutShell\n",
+        "source": "https://bio.tools/api/t/i-pv?format=json"
+    },
+    {
+        "id": "pmfastr",
+        "name": "PMFastR",
+        "text_content": "Tool Name: PMFastR\nDescription: Algorithm which iteratively uses a sequence-structure alignment procedure to build a multiple RNA structure alignment.\nFunctions: RNA secondary structure alignment\nTopics: RNA, Nucleic acid structure analysis\nHomepage: http://genome.ucf.edu/PMFastR/\nDocumentation: http://genome.ucf.edu/PMFastR/\n",
+        "source": "https://bio.tools/api/t/pmfastr?format=json"
+    },
+    {
+        "id": "agilepindelfilter",
+        "name": "AgilePindelFilter",
+        "text_content": "Tool Name: AgilePindelFilter\nDescription: Enables the rapid filtering, screening and sorting of indel variants derived from an exome sequencing experiment to allow the rapid detection of possible deleterious variants.\nFunctions: Genetic variation analysis\nTopics: Sequence analysis, Exome sequencing, Population genetics\nHomepage: http://dna.leeds.ac.uk/agile/AgilePindelFilter/\nDocumentation: http://dna.leeds.ac.uk/agile/AgilePindelFilter/guide.php\n",
+        "source": "https://bio.tools/api/t/agilepindelfilter?format=json"
+    },
+    {
+        "id": "adaptml",
+        "name": "AdaptML",
+        "text_content": "Tool Name: AdaptML\nDescription: Software package that will automatically partition groups of gene sequences according to both their genetic and ecological similarity.\nFunctions: Phylogenetic tree reconstruction\nTopics: Sequence analysis, Phylogenetics\nHomepage: http://almlab.mit.edu/adaptml.html\nDocumentation: http://almlab.mit.edu/adaptml.html\n",
+        "source": "https://bio.tools/api/t/adaptml?format=json"
+    },
+    {
+        "id": "1433pred",
+        "name": "14-3-3-Pred",
+        "text_content": "Tool Name: 14-3-3-Pred\nDescription: Webserver that predicts 14-3-3-binding sites by combining predictions from three different classifiers: ANN, PSSM and SVM.\nFunctions: Protein sequence analysis, Protein binding site prediction\nTopics: Protein binding sites\nHomepage: http://www.compbio.dundee.ac.uk/1433pred\nDocumentation: http://www.compbio.dundee.ac.uk/1433pred/about\n",
+        "source": "https://bio.tools/api/t/1433pred?format=json"
+    },
+    {
+        "id": "hgtector",
+        "name": "HGTector",
+        "text_content": "Tool Name: HGTector\nDescription: Computational pipeline for genome-wide detection of putative horizontal gene transfer (HGT) events based on sequence homology search hit distribution statistics.\nFunctions: Sequence comparison, Prediction and recognition\nTopics: Sequence analysis, Genetics, Genomics\nHomepage: https://github.com/DittmarLab/HGTector\nDocumentation: https://github.com/DittmarLab/HGTector/blob/master/README.md\n",
+        "source": "https://bio.tools/api/t/hgtector?format=json"
+    },
+    {
+        "id": "imem-seq",
+        "name": "iMem-Seq",
+        "text_content": "Tool Name: iMem-Seq\nDescription: Multi-label classifier for identifying membrane proteins with single and multiple types via physical-chemical property matrix and grey-PSSM.\nFunctions: Protein sequence analysis\nTopics: Proteins, Protein folds and structural domains, Membrane and lipoproteins\nHomepage: http://www.jci-bioinfo.cn/iMem-Seq\nDocumentation: http://www.jci-bioinfo.cn/iMem/iMem_readme.html\n",
+        "source": "https://bio.tools/api/t/imem-seq?format=json"
+    },
+    {
+        "id": "promfd",
+        "name": "PromFD",
+        "text_content": "Tool Name: PromFD\nDescription: Computer program to recognize vertebrate RNA polymerase II promoters.\nFunctions: Promoter prediction\nTopics: Transcription factors and regulatory sites, Sequence analysis, DNA, RNA, Model organisms\nHomepage: http://stormo.wustl.edu/src/PromFD/\nDocumentation: http://stormo.wustl.edu/src/PromFD/\n",
+        "source": "https://bio.tools/api/t/promfd?format=json"
+    }
+]

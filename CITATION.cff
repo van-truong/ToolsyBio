@@ -1,0 +1,19 @@
+### 📘 CITATION.cff
+### 📘 Citation File Format (CFF) for ToolsyBio
+cff-version: 1.2.0
+message: "If you use ToolsyBio in your work, please cite the following paper:"
+title: "ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape"
+authors:
+  - family-names: Truong
+    given-names: Van Q.
+    orcid: https://orcid.org/0000-0002-5485-1818
+  - family-names: Ritchie
+    given-names: Marylyn D.
+    orcid: https://orcid.org/0000-0002-1208-1720
+date-released: 2025-05-19
+abstract: >
+  ToolsyBio is a modular retrieval-augmented generation (RAG) system that helps researchers explore bioinformatics software using natural language queries. Built on metadata from bio.tools and enriched with EDAM ontology terms, it uses vector-based semantic search and locally served LLMs to return grounded, trustworthy responses.
+version: "v1.0"
+license: "MIT"
+repository-code: https://github.com/van-truong/ToolsyBio
+url: https://github.com/van-truong/ToolsyBio
