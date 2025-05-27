@@ -1,8 +1,12 @@
 ### 2_build_vector_store.py
-"""
-This script builds the vector store from bio.tools data.
-Run this once before using the RAG system.
-"""
+# --------------------------------------------
+# This script builds a Chroma vector store from tool metadata
+# previously saved in data/biotools_data.json.
+#
+# It splits each tool description into chunks, generates embeddings,
+# and stores them locally for use in the RAG system.
+# --------------------------------------------
+
 import json
 import os
 from langchain_community.document_loaders import JSONLoader
@@ -13,15 +17,18 @@ from langchain_core.documents import Document
 from tqdm import tqdm
 from langchain_huggingface import HuggingFaceEmbeddings
 
-# Configuration
-JSON_DATA_PATH = "data/biotools_data.json"
-CHUNK_SIZE = 1000 # Size of each chunk
-CHUNK_OVERLAP = 100 # Overlap between chunks
-EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2" 
-PERSIST_DIRECTORY = "chroma_db"
+# --- Configuration ---
+JSON_DATA_PATH = "data/biotools_data.json"       # Path to metadata JSON (from 1_fetch_biotools.py)
+PERSIST_DIRECTORY = "chroma_db"                  # Where the vector store will be saved
+CHUNK_SIZE = 1000                                 # Max characters per chunk
+CHUNK_OVERLAP = 100                               # Characters of overlap between chunks
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"         # SentenceTransformer model
 
 
 def load_and_split_documents():
+    """
+    Loads the saved JSON tool data and splits each tool into overlapping text chunks.
+    """
     with open(JSON_DATA_PATH, 'r') as f:
         data = json.load(f)
 
@@ -40,6 +47,9 @@ def load_and_split_documents():
     return text_splitter.split_documents(documents)
 
 def create_and_store_embeddings(chunks):
+    """
+    Embeds the document chunks and saves them to a persistent Chroma vector store.
+    """
     print(f"🔍 Creating embeddings for {len(chunks)} chunks...")
     embeddings_model = SentenceTransformerEmbeddings(model_name=EMBEDDING_MODEL_NAME)
     
@@ -51,6 +61,7 @@ def create_and_store_embeddings(chunks):
     )
     print("📦 Vector store created at:", PERSIST_DIRECTORY)
 
+# --- Entry Point ---
 if __name__ == "__main__":
     print("Building vector database...")
     chunks = load_and_split_documents()
