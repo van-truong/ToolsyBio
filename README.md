@@ -35,7 +35,7 @@ ToolsyBio/
 
 ## Environment Setup
 
-ToolsyBio is tested with **Python 3.9** and works well in both `conda` and `venv` environments.
+ToolsyBio has been tested with `Python 3.10`. Other versions (`3.9–3.11`) may also work, but 3.10 is recommended for compatibility with LangChain and ChromaDB.
 
 Simply clone this repository, `cd` into it, and run the provided scripts. Below are some environment configurations.
 

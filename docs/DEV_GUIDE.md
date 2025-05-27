@@ -17,7 +17,7 @@ cd ToolsyBio
 ```
 
 ## 🧪 Environment Setup
-ToolsyBio is tested with Python 3.9. You can use either Conda or venv.
+ToolsyBio has been tested with `Python 3.10`. Other versions (`3.9–3.11`) may also work, but 3.10 is recommended for compatibility with LangChain and ChromaDB. You can use either Conda or venv.
 
 ### Option 1: Using Conda (recommended)
 ```bash
