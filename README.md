@@ -115,7 +115,7 @@ You can also use this BibTeX entry:
 ```bibtex
 @misc{toolsybio2025,
   author       = {Van Q. Truong, Marylyn D. Ritchie},
-  title        = {ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape},
+  title        = {ToolsyBio: A retrieval-augmented generation system for navigating the bioinformatics software landscape},
   year         = {2025},
   howpublished = {\url{https://github.com/van-truong/ToolsyBio}},
   note         = {Accessed: [Insert access date here]}
