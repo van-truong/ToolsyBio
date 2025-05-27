@@ -121,6 +121,9 @@ You can also use this BibTeX entry:
   note         = {Accessed: [Insert access date here]}
 }
 ```
+## License
+
+ToolsyBio is open-source software released under the [MIT License](./LICENSE). You are free to use, modify, and distribute it with proper attribution.
 
 ## Acknowledgments
 * Tool metadata provided by the bio.tools registry
