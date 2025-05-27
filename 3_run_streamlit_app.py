@@ -64,7 +64,8 @@ if st.button("Get Answer") and query:
             st.markdown(formatted_context)
 
             # Step 5: Log interaction
-            log_evaluation(query, response, [d.metadata['name'] for d in docs])
+            log_evaluation(query, response, [d.metadata['name'] for d in docs], top_k=top_k)
+
 
         except Exception as e:
             st.error(f"Error: {e}")
