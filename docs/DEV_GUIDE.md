@@ -7,9 +7,58 @@ This guide provides notes for contributors and power users working with ToolsyBi
 
 ---
 
-## ⚙️ Fetching Tools from bio.tools
+## 🚀 Cloning the Repository
 
-By default, ToolsyBio fetches **all tools available in the bio.tools registry** (over 30,000 tools). You can filter this for a smaller or domain-specific subset by modifying the query parameters in `1_fetch_biotools.py`.
+To get started:
+
+```bash
+git clone https://github.com/van-truong/ToolsyBio.git
+cd ToolsyBio
+```
+
+## 🧪 Environment Setup
+ToolsyBio is tested with Python 3.9. You can use either Conda or venv.
+
+### Option 1: Using Conda (recommended)
+```bash
+conda create -n toolsybio python=3.9 -y
+conda activate toolsybio
+pip install -r requirements.txt
+```
+
+### Option 2: Using venv
+```bash
+python -m venv .venv
+source .venv/bin/activate      # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Environment & Dependency Notes
+Ensure your requirements.txt includes:
+```
+streamlit
+tqdm
+requests
+langchain
+sentence-transformers
+chromadb
+```
+
+And that Ollama is installed and running. For some user, you will start the Ollama service via the desktop application, while others can start it within a terminal window and leave it running in a separate terminal while using ToolsyBio.
+
+You can use any Ollama models. For the purpose of the paper, we tested ToolsyBio with `mistral:7b`. 
+
+```
+ollama serve
+ollama pull mistral:7b # Pulls the model from https://ollama.com/library/mistral
+```
+
+## ⚙️ Fetching Tools from bio.tools
+ToolsyBio can fetch either all tools or a filtered subset from the bio.tools API.
+
+You can switch the default so ToolsyBio fetches **all tools available in the bio.tools registry** (over 30,000 tools).
+
+You can also filter this for a smaller or domain-specific subset by modifying the query parameters in `1_fetch_biotools.py`.
 
 ### To Fetch All Tools (Full Registry)
 In `1_fetch_biotools.py`, make sure the query filter (`"q"`) is removed or commented out:
@@ -36,7 +85,10 @@ MAX_TOOLS_TO_FETCH = 40000
 ```
 
 ### To Fetch a Subset (e.g., for Testing or Domain-Specific Use)
-You can include a keyword or EDAM topic filter:
+This filtered configuration was used in the original US-RSE’25 submission, resulting in a test set of approximately 5,794 tools.
+
+You can also change these params to include a different keyword or EDAM topic filter:
+
 ```python
 params = {
     "format": "json",
@@ -46,7 +98,6 @@ params = {
     "ord": "desc"
 }
 ```
-This filtered configuration was used in the original US-RSE’25 submission, resulting in a test set of approximately 5,794 tools.
 
 ## Performance Tip: Rate Limiting
 The script includes polite waits to avoid API rate limits. You can speed it up slightly by adjusting the delay in 1_fetch_biotools.py:
@@ -70,7 +121,7 @@ rm -rf chroma_db/
 ```
 
 ## Rebuilding the Vector Store (ChromaDB)
-The RAG system splits each tool into text chunks, embeds them, and stores them in ChromaDB.
+The RAG system splits each tool’s metadata into text chunks, embeds them, and stores them in ChromaDB.
 
 Run:
 
@@ -78,14 +129,13 @@ Run:
 python 2_build_vector_store.py
 ```
 
-What it does:
-* Loads and flattens metadata from data/biotools_data.json
+This script:
+* Loads and flattens metadata from `data/biotools_data.json`
 * Splits each tool into overlapping ~1000-character chunks
-* Embeds using all-MiniLM-L6-v2
+* Embeds using `all-MiniLM-L6-v2`
+* Saves the result to `chroma_db/`
 
-Saves the result to chroma_db/
-
-✅ Output:
+✅ Sample output:
 ```
 📦 Vector store created at: chroma_db
 ✅ Vector database build complete.
@@ -102,7 +152,7 @@ Fetched 5794 tools in total.
 Data saved to biotools_data.json
 ```
 
-## Sample tool entry:
+## Sample tool record:
 ```
 --- Tool 1 (openms) ---
 Tool Name: OpenMS
@@ -111,24 +161,6 @@ Functions: Protein identification, Peak detection, ...
 Topics: Proteomics, Metabolomics
 Homepage: http://www.openms.de
 Documentation: http://ftp.mi.fu-berlin.de/...
-```
-
-
-## Environment & Dependency Notes
-Ensure your requirements.txt includes:
-```
-streamlit
-tqdm
-requests
-langchain
-sentence-transformers
-chromadb
-```
-
-And that Ollama is installed and running:
-```
-ollama serve
-ollama pull mistral
 ```
 
 ## Example Prompts for Testing
