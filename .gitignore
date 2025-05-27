@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Tool output and logs
+data/biotools_data.json
+logs/
+
+# Vector store files
+chroma_db/
+
+# Streamlit cache
+.streamlit/
+.cache/
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints (if you ever add notebooks)
+.ipynb_checkpoints/
+
+# Secret or config files (if added later)
+.env
