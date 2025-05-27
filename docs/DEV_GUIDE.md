@@ -9,7 +9,19 @@ This guide provides notes for contributors and power users working with ToolsyBi
 
 ## ⚙️ Fetching Tools from bio.tools
 
-ToolsyBio can retrieve up to **25,000+ tools** from the [bio.tools](https://bio.tools) API.
+By default, ToolsyBio fetches **all tools available in the bio.tools registry** (over 30,000 tools). You can filter this for a smaller or domain-specific subset by modifying the query parameters in `1_fetch_biotools.py`.
+
+### To Fetch All Tools (Full Registry)
+In `1_fetch_biotools.py`, make sure the query filter (`"q"`) is removed or commented out:
+
+```python
+params = {
+    "format": "json",
+    "page": 1,
+    "sort": "last_update",
+    "ord": "desc"
+}
+```
 
 To test with a smaller subset, open `1_fetch_biotools.py` and change:
 
@@ -20,8 +32,21 @@ MAX_TOOLS_TO_FETCH = 100  # Small test set
 To fetch the entire catalog (recommended for production):
 
 ```python
-MAX_TOOLS_TO_FETCH = 25000
+MAX_TOOLS_TO_FETCH = 40000
 ```
+
+### To Fetch a Subset (e.g., for Testing or Domain-Specific Use)
+You can include a keyword or EDAM topic filter:
+```python
+params = {
+    "format": "json",
+    "page": 1,
+    "q": "sequence analysis",  # Only tools matching this query
+    "sort": "last_update",
+    "ord": "desc"
+}
+```
+This filtered configuration was used in the original US-RSE’25 submission, resulting in a test set of approximately 5,794 tools.
 
 ## Performance Tip: Rate Limiting
 The script includes polite waits to avoid API rate limits. You can speed it up slightly by adjusting the delay in 1_fetch_biotools.py:
@@ -88,13 +113,6 @@ Homepage: http://www.openms.de
 Documentation: http://ftp.mi.fu-berlin.de/...
 ```
 
-## Example Prompts for Testing
-These queries were used in the paper:
-* "What FOSS tools support differential gene expression analysis?"
-* "What command-line tools support BAM format?"
-* "What tools help with gene prediction and clustering in viral genomes?"
-* "What tools integrate with Python or R for visualization?"
-
 
 ## Environment & Dependency Notes
 Ensure your requirements.txt includes:
@@ -112,6 +130,13 @@ And that Ollama is installed and running:
 ollama serve
 ollama pull mistral
 ```
+
+## Example Prompts for Testing
+These queries were used in the paper:
+* "What FOSS tools support differential gene expression analysis?"
+* "What command-line tools support BAM format?"
+* "What tools help with gene prediction and clustering in viral genomes?"
+* "What tools integrate with Python or R for visualization?"
 
 ## Questions?
 For help extending the tool, adding new sources, or updating the embedding method, feel free to open a GitHub issue or pull request (PR).

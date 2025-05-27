@@ -25,7 +25,7 @@ params = {
     "sort": "last_update", # Sort by last update to get more recent tools potentially
     "ord": "desc"
 }
-MAX_TOOLS_TO_FETCH = 25000 # 200 to grab proof of concept, 25000 for full dataset
+MAX_TOOLS_TO_FETCH = 40000 # 200 to grab proof of concept, 40000 to safely capture the full dataset
 
 def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
     """Fetches tool data from the bio.tools API."""

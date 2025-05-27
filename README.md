@@ -33,15 +33,30 @@ ToolsyBio/
 
 ---
 
-## ⚙️ Setup
+## Environment Setup
 
-Install Python 3.9+ and dependencies:
+ToolsyBio is tested with **Python 3.9** and works well in both `conda` and `venv` environments.
+
+Simply clone this repository, `cd` into it, and run the provided scripts. Below are some environment configurations.
+
+### Option 1: Using Conda (recommended)
 
 ```bash
+conda create -n toolsybio python=3.9 -y
+conda activate toolsybio
+pip install -r requirements.txt
+```
+### Option 2: Using venv
+
+```bash
+python -m venv .venv
+source .venv/bin/activate     # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Requirements
+## Dependencies
+ToolsyBio depends on the following libraries (in `requirements.txt`):
+
 ```
 streamlit
 tqdm
@@ -50,9 +65,12 @@ langchain
 sentence-transformers
 chromadb
 ```
+ToolsyBio also uses a local LLM served via Ollama. Be sure to install the version that works with your local environment.
 
 ## Step 1: Fetch tool metadata from bio.tools
-This script retrieves up to 25,000 tools, formats metadata, and saves to `data/biotools_data.json`.
+This script retrieves tens of thousands of tools, formats metadata, and saves to `data/biotools_data.json`. 
+
+Under `params=`, this field is enabled `"q": "sequence analysis", # General keyword search` which limits the fetch to 5,794 sequence analysis tools. If this line is edited or commented out, the fetch won't be constrained to this set of ~5,000. 
 
 ```
 python 1_fetch_biotools.py
@@ -66,6 +84,7 @@ python 2_build_vector_store.py
 ```
 
 ## Step 3: Launch the web app
+Make sure the model you want has been pulled from Ollama and is ready before running the app. 
 
 ```
 streamlit run 3_run_streamlit_app.py
