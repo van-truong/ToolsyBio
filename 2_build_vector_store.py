@@ -1,4 +1,4 @@
-### rag_pipeline.py
+### 2_build_vector_store.py
 """
 This script builds the vector store from bio.tools data.
 Run this once before using the RAG system.

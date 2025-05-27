@@ -1,4 +1,4 @@
-### streamlit_app.py
+### 3_run_streamlit_app.py
 """
 Streamlit front end to interact with the RAG assistant.
 """

@@ -1,17 +1,20 @@
 # 🛠️ ToolsyBio Developer Guide
 
-This document includes advanced notes for power users and contributors working with ToolsyBio. It covers metadata fetch options, vector store reset instructions, and debug tips that go beyond the main [README](../README.md).
+This guide provides notes for contributors and power users working with ToolsyBio. It covers metadata fetch options, vector store resets, and optimization tips beyond the main [README](../README.md).
+
+**Last updated:** May 2025  
+**Applies to:** ToolsyBio v1.0 (US-RSE'25 release)
 
 ---
 
-## ⚙️ Fetching More Tools from bio.tools
+## ⚙️ Fetching Tools from bio.tools
 
-By default, ToolsyBio is configured to retrieve **all tools available in bio.tools** (up to 25,000+ tools).
+ToolsyBio can retrieve up to **25,000+ tools** from the [bio.tools](https://bio.tools) API.
 
-To reduce scope (e.g. for testing), open `fetch_biotools.py` and edit:
+To test with a smaller subset, open `1_fetch_biotools.py` and change:
 
 ```python
-MAX_TOOLS_TO_FETCH = 100  # For a small demo
+MAX_TOOLS_TO_FETCH = 100  # Small test set
 ```
 
 To fetch the entire catalog (recommended for production):
@@ -21,7 +24,7 @@ MAX_TOOLS_TO_FETCH = 25000
 ```
 
 ## Performance Tip: Rate Limiting
-The script includes polite waits to avoid API rate limits. You can speed it up slightly by adjusting the delay in fetch_biotools.py:
+The script includes polite waits to avoid API rate limits. You can speed it up slightly by adjusting the delay in 1_fetch_biotools.py:
 
 ```python
 time.sleep(0.2)  # Between individual tool detail requests
@@ -29,8 +32,7 @@ time.sleep(0.2)  # Between individual tool detail requests
 Warning: Do not reduce this below 0.1 seconds or you risk getting blocked by the API.
 
 ## Resetting the Vector Store (Optional)
-You usually do not need to manually delete the vector store, as Chroma.from_documents() will overwrite the contents of the existing directory.
-However, delete the store if:
+Chroma overwrites contents when you rebuild, but a manual reset is useful when:
 * You change the chunking strategy
 * You switch to a new embedding model
 * Retrieval starts returning stale or incorrect results
@@ -42,13 +44,13 @@ To delete:
 rm -rf chroma_db/
 ```
 
-## Rebuilding the Vector Database
+## Rebuilding the Vector Store (ChromaDB)
 The RAG system splits each tool into text chunks, embeds them, and stores them in ChromaDB.
 
 Run:
 
 ```bash
-python rag_pipeline.py
+python 2_build_vector_store.py
 ```
 
 What it does:
@@ -92,19 +94,6 @@ These queries were used in the paper:
 * "What command-line tools support BAM format?"
 * "What tools help with gene prediction and clustering in viral genomes?"
 * "What tools integrate with Python or R for visualization?"
-
-## Running Batch Evaluation (for consistency testing)
-Use the batch evaluation script to test queries from the paper:
-
-```
-python run_batch_eval.py
-```
-
-Each query will:
-* Trigger RAG retrieval and LLM response
-* Save results to logs/eval_results.json
-
-You can review the JSON logs to validate tool matches and evaluate grounding fidelity.
 
 
 ## Environment & Dependency Notes
