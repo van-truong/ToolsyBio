@@ -3,7 +3,7 @@
 **ToolsyBio** is a modular, open-source system that helps researchers navigate the bioinformatics software landscape using **retrieval-augmented generation (RAG)**. It combines metadata from [bio.tools](https://bio.tools) with vector search and a local large language model (LLM) served through [Ollama](https://ollama.com/), enabling users to ask natural language questions about software tools.
 
 📝 **Paper**:  
-> (Under review) Truong, V.Q., & Ritchie, M.D. (2025). *ToolsyBio: A retrieval-augmented generation system for navigating the bioinformatics software landscape.* Proceedings of US-RSE 2025. [PDF](./US-RSE25_submission_112.pdf)
+> (Under review) Truong, V.Q., & Ritchie, M.D. (2025). *ToolsyBio: A retrieval-augmented generation system for navigating the bioinformatics software landscape.* Proceedings of US-RSE 2025.
 
 ---
 
@@ -17,16 +17,14 @@ ToolsyBio/
 ├── logs/ ← Logs generated from queries
 │ └── eval_results.json
 │
-├── fetch_biotools.py ← Script to fetch tool data from bio.tools API
-├── rag_pipeline.py ← Builds Chroma vector store from metadata
+├── 1_fetch_biotools.py ← Fetches tool data from bio.tools API
+├── 2_build_vector_store.py ← Builds Chroma vector store from metadata
+├── 3_run_streamlit_app.py ← Streamlit frontend for interactive queries
 ├── rag_chain.py ← Loads RAG chain (retriever + LLM)
-├── streamlit_app.py ← Streamlit frontend for interactive queries
 ├── eval_logger.py ← Saves query/response logs to JSON
-├── run_batch_eval.py ← (Optional) Batch evaluation script
 ├── requirements.txt ← Python dependencies
 ├── README.md ← You are here!
-├── US-RSE25_submission_112.pdf ← Paper
-└── CITATION.cff ← Citation metadata
+├── LICENSE ← MIT License
 ```
 
 ---
@@ -42,6 +40,7 @@ Install Python 3.9+ and dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
 ## Requirements
 ```
 streamlit
@@ -53,23 +52,23 @@ chromadb
 ```
 
 ## Step 1: Fetch tool metadata from bio.tools
-This script retrieves up to 25,000 tools, formats metadata, and saves to JSON.
+This script retrieves up to 25,000 tools, formats metadata, and saves to `data/biotools_data.json`.
 
 ```
-python fetch_biotools.py
+python 1_fetch_biotools.py
 ```
 
 ## Step 2: Build the vector store (RAG knowledge base)
-Embeds tool descriptions using all-MiniLM-L6-v2 and stores in ChromaDB.
+Embeds tool descriptions using `all-MiniLM-L6-v2` and stores them in ChromaDB.
 
 ```
-python rag_pipeline.py
+python 2_build_vector_store.py
 ```
 
 ## Step 3: Launch the web app
 
 ```
-streamlit run streamlit_app.py
+streamlit run 3_run_streamlit_app.py
 ```
 
 Then visit http://localhost:8501 in your browser.
@@ -85,42 +84,23 @@ You can ask questions like:
 
 Results are grounded in retrieved tool metadata and include documentation/homepage links.
 
-## Batch Evaluation (Optional)
-Run a predefined set of queries and log outputs:
 
-```
-python run_batch_eval.py
-```
+## 🧾 Citation
 
+If you use ToolsyBio in your work, please cite the GitHub repository while our paper is under review at US-RSE'25:
 
+> Truong, V.Q. (2025). ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape. GitHub repository: [https://github.com/van-truong/ToolsyBio](https://github.com/van-truong/ToolsyBio)
 
+You can also use this BibTeX entry:
 
-## Citation
-If you use ToolsyBio in your work, please cite the US-RSE 2025 paper (see below or CITATION.cff).
-```
-
----
-
-### 📘 CITATION.cff
-
-```yaml
-cff-version: 1.2.0
-message: "If you use ToolsyBio in your work, please cite the following paper:"
-title: "ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape"
-authors:
-  - family-names: Truong
-    given-names: Van Q.
-    orcid: https://orcid.org/0000-0002-5485-1818
-  - family-names: Ritchie
-    given-names: Marylyn D.
-    orcid: https://orcid.org/0000-0002-1208-1720
-date-released: 2025-05-19
-abstract: >
-  ToolsyBio is a modular retrieval-augmented generation (RAG) system that helps researchers explore bioinformatics software using natural language queries. Built on metadata from bio.tools and enriched with EDAM ontology terms, it uses vector-based semantic search and locally served LLMs to return grounded, trustworthy responses.
-version: "v1.0"
-license: "MIT"
-repository-code: https://github.com/van-truong/ToolsyBio
-url: https://github.com/van-truong/ToolsyBio
+```bibtex
+@misc{toolsybio2025,
+  author       = {Van Q. Truong},
+  title        = {ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape},
+  year         = {2025},
+  howpublished = {\url{https://github.com/van-truong/ToolsyBio}},
+  note         = {Accessed: [Insert access date here]}
+}
 ```
 
 ## Acknowledgments
