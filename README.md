@@ -108,13 +108,13 @@ Results are grounded in retrieved tool metadata and include documentation/homepa
 
 If you use ToolsyBio in your work, please cite the GitHub repository while our paper is under review at US-RSE'25:
 
-> Truong, V.Q. (2025). ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape. GitHub repository: [https://github.com/van-truong/ToolsyBio](https://github.com/van-truong/ToolsyBio)
+> Truong, V.Q, Ritchie, M.D. (2025). ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape. GitHub repository: [https://github.com/van-truong/ToolsyBio](https://github.com/van-truong/ToolsyBio)
 
 You can also use this BibTeX entry:
 
 ```bibtex
 @misc{toolsybio2025,
-  author       = {Van Q. Truong},
+  author       = {Van Q. Truong, Marylyn D. Ritchie},
   title        = {ToolsyBio: A Retrieval-Augmented Generation System for Navigating the Bioinformatics Software Landscape},
   year         = {2025},
   howpublished = {\url{https://github.com/van-truong/ToolsyBio}},
