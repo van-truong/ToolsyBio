@@ -1,34 +1,37 @@
 # 1_fetch_biotools.py
+# --------------------------------------------
+# This script fetches tool metadata from the bio.tools API.
+# It can retrieve either all tools (≈30,000+) or a filtered subset
+# (e.g., "sequence analysis" tools as used in the US-RSE'25 paper).
+#
+# Output: A JSON file of structured tool entries used as input for RAG.
+# --------------------------------------------
+
 import requests
 import json
 import time
 
-# --- Configuration ---
-# You can filter by topic, e.g., "Sequence analysis", "Protein structure", "Genomics"
-# Find EDAM topic IDs from https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Ftopic_0003
-# Example: topic_0080 is "Sequence analysis"
-# topic_0091 is "Bioinformatics" (very broad)
-# For a manageable PoC, pick a more specific topic or limit the number of results
-BIOTOOLS_API_URL = "https://bio.tools/api/t"
-# Let's try to get tools related to "Sequence alignment" (operation_0292) or "Sequence analysis" (topic_0080)
-# and limit to a reasonable number for the PoC, e.g., 50-100 tools.
-# Using ?format=json&page=1&q=sequence%20alignment (example query string)
-# Or filter by EDAM term directly if known.
 
-# Example: Get first 50 tools (default sort might be by recent additions)
-# To get more, you'll need to handle pagination (the 'next' field in the response)
+# --- API Configuration ---
+# The query parameter "q" filters tools by keyword.
+# Example used in the paper: q = "sequence analysis" (~5,794 tools).
+# To fetch the full registry, REMOVE the "q" line below.
+BIOTOOLS_API_URL = "https://bio.tools/api/t"
+
 params = {
     "format": "json",
     "page": 1,
-    # "topic": "topic_0080", # Example: Sequence analysis - uncomment to filter
-    "q": "sequence analysis", # General keyword search
+    "q": "sequence analysis", # Comment out to fetch ALL tools
     "sort": "last_update", # Sort by last update to get more recent tools potentially
     "ord": "desc"
 }
+
+# --- Constants ---
+# Maximum number of tools to fetch.
 MAX_TOOLS_TO_FETCH = 40000 # 200 to grab proof of concept, 40000 to safely capture the full dataset
 
 def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
-    """Fetches tool data from the bio.tools API."""
+    """Fetches tool metadata from the bio.tools API."""
     tools_data = []
     page = 1
     fetched_count = 0
@@ -63,7 +66,7 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
                     detail_response.raise_for_status()
                     tool_details = detail_response.json()
 
-                    # Extract relevant information
+                    # Extract relevant fields from the detailed record
                     name = tool_details.get('name', 'N/A')
                     description = tool_details.get('description', 'N/A')
 
@@ -83,8 +86,7 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
                        docs_url = tool_details['documentation'][0].get('url', 'N/A')
 
 
-                    # Combine into a single text for easier processing later for RAG
-                    # You might refine this to be more structured later
+                    # Combine into a single text block for easier processing later for RAG
                     combined_text = (
                         f"Tool Name: {name}\n"
                         f"Description: {description}\n"
@@ -101,7 +103,7 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
                         "source": detail_url
                     })
                     fetched_count += 1
-                    time.sleep(0.2) # Be polite to the API
+                    time.sleep(0.2) # Respectful delay for individual requests
 
                 except requests.exceptions.RequestException as e_detail:
                     print(f"Error fetching details for {tool.get('biotoolsID', 'Unknown tool')}: {e_detail}")
@@ -116,7 +118,7 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
             if fetched_count >= max_tools:
                 print(f"Reached max tools to fetch: {fetched_count}")
                 break
-            time.sleep(0.5) # Be polite between page requests
+            time.sleep(0.5) # Polite delay between page fetches
 
         except requests.exceptions.RequestException as e:
             print(f"Error fetching page {page}: {e}")
@@ -127,6 +129,7 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
 
     return tools_data
 
+# --- Entry Point ---
 if __name__ == "__main__":
     print("Fetching bio.tools data...")
     all_tools = fetch_tools_data()
