@@ -83,7 +83,7 @@ Embeds tool descriptions using `all-MiniLM-L6-v2` and stores them in ChromaDB.
 python 2_build_vector_store.py
 ```
 
-## Step 3: Launch the web app
+## Step 3: Launch the browser app locally
 Make sure the model you want has been pulled from Ollama and is ready before running the app. 
 
 ```
