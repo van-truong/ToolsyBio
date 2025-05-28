@@ -119,7 +119,10 @@ Building vector database...
 ## Step 3: Launch the browser app locally
 Make sure the model you want has been pulled from Ollama and is ready before running the app. 
 
-Currently, `search_kwargs={"k": 5}` and `temperature=0.0` in `rag_chain.py`. 
+Here are the conditions currently set in `rag_chain.py`:
+* `OLLAMA_MODEL = "mistral:7b"`
+* `search_kwargs={"k": 5}`
+* `temperature=0.0`
 
 ```
 python -m streamlit run 3_run_streamlit_app.py
