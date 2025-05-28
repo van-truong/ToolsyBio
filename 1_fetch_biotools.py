@@ -4,69 +4,87 @@
 # It can retrieve either all tools (≈30,000+) or a filtered subset
 # (e.g., "sequence analysis" tools as used in the US-RSE'25 paper).
 #
-# Output: A JSON file of structured tool entries used as input for RAG.
+# It supports resume mode by skipping already-fetched tool IDs and
+# saving after each page to avoid data loss.
+# Output: data/biotools_data.json
 # --------------------------------------------
 
 import requests
 import json
 import time
-
+import os
 
 # --- API Configuration ---
-# The query parameter "q" filters tools by keyword.
-# Example used in the paper: q = "sequence analysis" (~5,794 tools).
-# To fetch the full registry, REMOVE the "q" line below.
 BIOTOOLS_API_URL = "https://bio.tools/api/t"
 
 params = {
     "format": "json",
     "page": 1,
-    "q": "sequence analysis", # Comment out to fetch ALL tools
-    "sort": "last_update", # Sort by last update to get more recent tools potentially
+    "q": "sequence analysis",  # Comment this out to fetch ALL tools
+    "sort": "last_update",
     "ord": "desc"
 }
 
 # --- Constants ---
-# Maximum number of tools to fetch.
-MAX_TOOLS_TO_FETCH = 40000 # 200 to grab proof of concept, 40000 to safely capture the full dataset
+MAX_TOOLS_TO_FETCH = 40000
+OUTPUT_FILENAME = "data/biotools_data.json"
+
+def load_existing_tools():
+    """
+    Loads previously saved tools (if any) and returns:
+    - list of tool dicts
+    - set of tool IDs already fetched
+    """
+    os.makedirs(os.path.dirname(OUTPUT_FILENAME), exist_ok=True)
+
+    if os.path.exists(OUTPUT_FILENAME):
+        with open(OUTPUT_FILENAME, "r") as f:
+            data = json.load(f)
+        ids = {t["id"] for t in data if "id" in t}
+        print(f"🔄 Resume mode: {len(ids)} tools already saved.")
+        return data, ids
+    return [], set()
 
 def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
-    """Fetches tool metadata from the bio.tools API."""
-    tools_data = []
+    """Fetches tool metadata page-by-page, skipping already saved entries."""
+    tools_data, seen_ids = load_existing_tools()
     page = 1
-    fetched_count = 0
+    fetched_count = len(seen_ids)
 
     while fetched_count < max_tools:
         current_params = params.copy()
         current_params["page"] = page
-        print(f"Fetching page {page} with params: {current_params}")
+        print(f"📄 Fetching page {page} with params: {current_params}")
 
         try:
             response = requests.get(BIOTOOLS_API_URL, params=current_params, timeout=30)
-            response.raise_for_status()  # Raise an exception for HTTP errors
+            response.raise_for_status()
             data = response.json()
 
             if not data.get('list'):
                 print("No more tools found or empty list.")
                 break
 
+            new_this_page = 0
+
             for tool in data['list']:
                 if fetched_count >= max_tools:
                     break
-                try:
-                    # Fetch full details for each tool
-                    tool_id = tool.get('biotoolsID')
-                    if not tool_id:
-                        print(f"Skipping tool without biotoolsID: {tool.get('name')}")
-                        continue
 
-                    print(f"Fetching details for: {tool_id}")
+                tool_id = tool.get('biotoolsID')
+                if not tool_id:
+                    print(f"⚠️ Skipping tool without biotoolsID: {tool.get('name')}")
+                    continue
+                if tool_id in seen_ids:
+                    continue  # Skip already fetched tools
+
+                try:
+                    print(f"🔍 Fetching details for: {tool_id}")
                     detail_url = f"https://bio.tools/api/t/{tool_id}?format=json"
                     detail_response = requests.get(detail_url, timeout=30)
                     detail_response.raise_for_status()
                     tool_details = detail_response.json()
 
-                    # Extract relevant fields from the detailed record
                     name = tool_details.get('name', 'N/A')
                     description = tool_details.get('description', 'N/A')
 
@@ -75,18 +93,16 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
                         for func in tool_details['function']:
                             operations = [op.get('term', 'N/A') for op in func.get('operation', []) if op.get('term')]
                             functions.extend(operations)
-                    functions_str = ", ".join(list(set(functions))) if functions else "N/A"
+                    functions_str = ", ".join(sorted(set(functions))) if functions else "N/A"
 
                     topics = [topic.get('term', 'N/A') for topic in tool_details.get('topic', []) if topic.get('term')]
-                    topics_str = ", ".join(list(set(topics))) if topics else "N/A"
+                    topics_str = ", ".join(sorted(set(topics))) if topics else "N/A"
 
                     homepage = tool_details.get('homepage', 'N/A')
                     docs_url = ""
                     if tool_details.get('documentation'):
-                       docs_url = tool_details['documentation'][0].get('url', 'N/A')
+                        docs_url = tool_details['documentation'][0].get('url', 'N/A')
 
-
-                    # Combine into a single text block for easier processing later for RAG
                     combined_text = (
                         f"Tool Name: {name}\n"
                         f"Description: {description}\n"
@@ -102,46 +118,44 @@ def fetch_tools_data(max_tools=MAX_TOOLS_TO_FETCH):
                         "text_content": combined_text,
                         "source": detail_url
                     })
+
+                    seen_ids.add(tool_id)
                     fetched_count += 1
-                    time.sleep(0.2) # Respectful delay for individual requests
+                    new_this_page += 1
+                    time.sleep(0.2)  # Be respectful to the API
 
                 except requests.exceptions.RequestException as e_detail:
-                    print(f"Error fetching details for {tool.get('biotoolsID', 'Unknown tool')}: {e_detail}")
+                    print(f"❌ Error fetching details for {tool_id}: {e_detail}")
                 except json.JSONDecodeError as e_json_detail:
-                    print(f"Error decoding JSON for {tool.get('biotoolsID', 'Unknown tool')}: {e_json_detail}")
+                    print(f"❌ Error decoding JSON for {tool_id}: {e_json_detail}")
 
+            # ✅ Save after each page
+            with open(OUTPUT_FILENAME, 'w') as f:
+                json.dump(tools_data, f, indent=4)
+            print(f"💾 Saved {fetched_count} tools total. (+{new_this_page} new on this page)")
 
             if not data.get('next'):
-                print("No more pages.")
+                print("✅ No more pages.")
                 break
+
             page += 1
             if fetched_count >= max_tools:
-                print(f"Reached max tools to fetch: {fetched_count}")
+                print(f"✅ Reached max tools: {fetched_count}")
                 break
-            time.sleep(0.5) # Polite delay between page fetches
+
+            time.sleep(0.5)  # Delay between page requests
 
         except requests.exceptions.RequestException as e:
-            print(f"Error fetching page {page}: {e}")
+            print(f"❌ Error fetching page {page}: {e}")
             break
         except json.JSONDecodeError:
-            print(f"Error decoding JSON from page {page}. Content: {response.text[:200]}")
+            print(f"❌ Error decoding JSON on page {page}.")
             break
 
     return tools_data
 
 # --- Entry Point ---
 if __name__ == "__main__":
-    print("Fetching bio.tools data...")
+    print("🚀 Starting tool fetch from bio.tools...")
     all_tools = fetch_tools_data()
-    print(f"\nFetched {len(all_tools)} tools in total.")
-
-    # Save to a JSON file
-    output_filename = "biotools_data.json"
-    with open(output_filename, 'w') as f:
-        json.dump(all_tools, f, indent=4)
-    print(f"Data saved to {output_filename}")
-
-    # Example: Print info for the first few tools
-    for i, tool_doc in enumerate(all_tools[:3]):
-        print(f"\n--- Tool {i+1} ({tool_doc['id']}) ---")
-        print(tool_doc['text_content'])
+    print(f"✅ Finished. Fetched {len(all_tools)} tools.")
