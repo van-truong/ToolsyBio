@@ -50,6 +50,9 @@ You can use any Ollama models. For the purpose of the paper, we tested ToolsyBio
 
 ```
 ollama serve
+```
+
+```
 ollama pull mistral:7b # Pulls the model from https://ollama.com/library/mistral
 ```
 

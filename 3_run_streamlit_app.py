@@ -18,15 +18,8 @@ Ask any question about bioinformatics software tools indexed in `bio.tools`.
 Powered by a local large language model via [Ollama](https://ollama.com/) and semantic search using ChromaDB + LangChain.
 """)
 
-# --- Sidebar settings ---
-st.sidebar.header("🔧 Settings")
-top_k = st.sidebar.selectbox(
-    "Number of sources to retrieve (Top-K)",
-    options=[1, 3, 5, 10],
-    index=1  # Default to 3
-)
 
-# --- Load RAG pipeline ---
+# --- Load RAG pipeline only once (cached) ---
 @st.cache_resource
 def get_rag():
     """
@@ -40,32 +33,29 @@ chain, retriever = get_rag()
 
 # --- Main interaction UI ---
 query = st.text_input("🔍 Ask a question:", placeholder="e.g. What tools do differential expression analysis?")
-
 if st.button("Get Answer") and query:
     with st.spinner("Thinking..."):
         try:
-            # Step 1: Retrieve top-k relevant documents
-            docs = retriever.get_relevant_documents(query, search_kwargs={"k": top_k})
+            # Step 1: Retrieve relevant documents from vector store
+            docs = retriever.get_relevant_documents(query)
 
             # Step 2: Format sources for display
-            formatted_context = "\n\n".join([
-                f"**{d.metadata['name']}** — [source]({d.metadata['source']})"
-                for d in docs
-            ])
-
-            # Step 3: Generate LLM response
+            formatted_context = "\n\n".join([f"**{d.metadata['name']}** — [source]({d.metadata['source']})" for d in docs])
+            
+            # Step 3: Get LLM-generated answer
             response = chain.invoke(query)
 
-            # Step 4: Display output
+            # Step 4: Display response and sources
             st.subheader("💡 Answer")
             st.markdown(response)
             st.markdown("---")
             st.subheader("📚 Top Sources")
+            st.caption("_These are the top tools retrieved based on your query. Not all may appear in the final answer._")
             st.markdown(formatted_context)
 
-            # Step 5: Log interaction
-            log_evaluation(query, response, [d.metadata['name'] for d in docs], top_k=top_k)
-
+            # Step 5: Log the query and output
+            log_evaluation(query, response, [d.metadata['name'] for d in docs])
 
         except Exception as e:
             st.error(f"Error: {e}")
+

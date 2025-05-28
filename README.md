@@ -76,6 +76,28 @@ In the paper, we test a subset of 5,794 tools. Under `params=`, we set the field
 python 1_fetch_biotools.py
 ```
 
+Example output:
+
+```
+...
+🔍 Fetching details for: eugene
+🔍 Fetching details for: easycluster
+🔍 Fetching details for: mmb_api
+🔍 Fetching details for: sequence_searcher
+🔍 Fetching details for: genocanyon
+...
+💾 Saved 5750 tools total. (+50 new on this page)
+📄 Fetching page 116 with params: {'format': 'json', 'page': 116, 'q': 'sequence analysis', 'sort': 'last_update', 'ord': 'desc'}
+...
+🔍 Fetching details for: polydot_ws_husar
+🔍 Fetching details for: supermatcher_ws_husar
+🔍 Fetching details for: wordmatch_ws_husar
+🔍 Fetching details for: mismax
+💾 Saved 5795 tools total. (+45 new on this page)
+✅ No more pages.
+✅ Finished. Fetched 5795 tools.
+```
+
 ## Step 2: Build the vector store (RAG knowledge base)
 Embeds tool descriptions using `all-MiniLM-L6-v2` and stores them in ChromaDB.
 
@@ -83,11 +105,24 @@ Embeds tool descriptions using `all-MiniLM-L6-v2` and stores them in ChromaDB.
 python 2_build_vector_store.py
 ```
 
+Example output:
+
+```
+Building vector database...
+🔍 Creating embeddings for 6084 chunks...
+/mnt/c/Users/vtruong/Projects/ToolsyBio/2_build_vector_store.py:54: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings_model = SentenceTransformerEmbeddings(model_name=EMBEDDING_MODEL_NAME)
+🔢 Embedding Chunks: 100%|███████████████| 6084/6084 [00:00<00:00, 4121813.20it/s]
+📦 Vector store created at: chroma_db
+✅ Vector database build complete.
+```
 ## Step 3: Launch the browser app locally
 Make sure the model you want has been pulled from Ollama and is ready before running the app. 
 
+Currently, `search_kwargs={"k": 5}` and `temperature=0.0` in `rag_chain.py`. 
+
 ```
-streamlit run 3_run_streamlit_app.py
+python -m streamlit run 3_run_streamlit_app.py
 ```
 
 Then visit http://localhost:8501 in your browser.
@@ -100,6 +135,7 @@ You can ask questions like:
 * What command-line tools support BAM format?
 * What tools help with gene prediction and clustering in viral genomes?
 * What tools integrate with Python or R for visualization?
+* Can you recommend some lightweight tools for QC of sequencing data?
 
 Results are grounded in retrieved tool metadata and include documentation/homepage links.
 
