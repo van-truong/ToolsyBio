@@ -21,7 +21,7 @@ ToolsyBio has been tested with `Python 3.10`. Other versions (`3.9–3.11`) may 
 
 ### Option 1: Using Conda (recommended)
 ```bash
-conda create -n toolsybio python=3.9 -y
+conda create -n toolsybio python=3.10 -y
 conda activate toolsybio
 pip install -r requirements.txt
 ```
