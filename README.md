@@ -70,7 +70,7 @@ ToolsyBio also uses a local LLM served via Ollama. Be sure to install the versio
 ## Step 1: Fetch tool metadata from bio.tools
 This script retrieves tens of thousands of tools, formats metadata, and saves to `data/biotools_data.json`. 
 
-In the paper, we test a subset of 5,794 tools. Under `params=`, we set the field `"q": "sequence analysis", # General keyword search`, which limits the fetch to 5,794 sequence analysis tools. If this line is edited or commented out, the fetch won't be constrained to that particular subset.
+In the paper, we test a subset of 5,794 tools. Under `params=`, we set the field `"q": "sequence analysis"`, which limits the fetch to 5,794 sequence analysis tools. If this line is edited or commented out, the fetch won't be constrained to that particular subset.
 
 ```
 python 1_fetch_biotools.py
