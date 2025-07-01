@@ -23,7 +23,7 @@ ToolsyBio/
 ├── rag_chain.py ← Loads RAG chain (retriever + LLM)
 ├── eval_logger.py ← Saves query/response logs to JSON
 ├── requirements.txt ← Python dependencies
-├── README.md ← You are here!
+├── README.md ← Hey, you're here!
 ├── LICENSE ← MIT License
 ```
 
@@ -42,7 +42,7 @@ Simply clone this repository, `cd` into it, and run the provided scripts. Below 
 ### Option 1: Using Conda (recommended)
 
 ```bash
-conda create -n toolsybio python=3.9 -y
+conda create -n toolsybio python=3.10 -y
 conda activate toolsybio
 pip install -r requirements.txt
 ```
